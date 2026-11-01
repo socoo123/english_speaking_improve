@@ -1,3 +1,4 @@
+import { learningProgress } from './progress.mjs';
 import { SCORE_KEYS, SCORE_LABELS, feedbackTemplate, parseReport, gradeQuiz } from './report.mjs';
 
 const app = document.querySelector('#app');
@@ -45,25 +46,6 @@ function downloadReport(text) {
   toast('已导出反馈。它仍是待复核报告，不是正式成绩。');
 }
 
-function heading(label, badge = '美音优先 · 每周 10 小时') {
-  return `<div class="page-heading"><p>LEARNING JOURNAL <span aria-hidden="true"> / </span> ${label}</p><span class="badge">${badge}</span></div>`;
-}
-
-function overview() {
-  return `${heading('我的学习方向')}
-    <section class="hero">
-      <div class="hero-copy"><p class="eyebrow">SIX MONTHS. REAL CONVERSATIONS.</p><h1>从“我听懂了”，<span>到“让我来说”。</span></h1><p>用半年时间，把英语练进真实工作里。<br>从需求澄清开始，一步步学会讨论方案、回应追问，清楚地表达自己的想法。</p><div class="actions"><a class="button" href="#lesson">进入本章练习 <span aria-hidden="true">↗</span></a><a class="button secondary" href="#tutor">先做口语诊断</a></div></div>
-      <div class="hero-art" aria-hidden="true"><div class="orbit"><span class="art-dot"></span><div class="orbit-number">26<small>WEEKS TO GROW</small></div></div><span class="floating one">“Could you clarify…?”</span><span class="floating two">A clearer voice, every week.</span></div>
-    </section>
-    <div class="metrics"><div class="metric"><strong>B1 → B2</strong><span>工作沟通的努力方向</span></div><div class="metric"><strong>10 <small>h / 周</small></strong><span>持续投入，允许调整节奏</span></div><div class="metric"><strong>80 / 20</strong><span>工作与面试 / 生活与旅行</span></div><div class="metric"><strong>美式英语</strong><span>当前发音训练参考</span></div></div>
-    <div class="section-header"><h2>从这一章开始</h2><span>掌握一章，再推荐下一章</span></div>
-    <div class="grid-two"><section class="panel"><div class="course-kicker"><span class="large-number">${escape(lesson.number)}</span><div><p class="eyebrow">REQUIREMENTS & CLARITY</p><h3>${escape(lesson.title)}</h3></div></div><p class="muted">${escape(lesson.summary)}</p><div class="chips"><span class="chip">B1 起步</span><span class="chip">需求澄清</span><span class="chip">原创课文</span></div><div class="notice">视频及字幕许可待核实。现在可使用原创课文和外教指令练习；尚未完成正式口语测评。</div><a class="inline-link" href="#lesson">查看课文与练习 →</a></section>
-    <section class="panel green"><p class="eyebrow">YOUR AI SPEAKING COACH</p><h2>不只背会，<br>还要在新场景里说出来。</h2><p class="muted">每课都有专属外教指令。练发音、做对话、接受追问，再把真实反馈带回来。</p><a class="button small" href="#tutor">查看本课外教要求 ↗</a></section></div>
-    <div class="grid-two"><section class="panel"><h3>训练围绕你的生活展开</h3><p class="muted">优先练需求、架构和技术面试，也留出空间练旅行与日常交流。</p><div class="mixbar" aria-label="工作场景百分之八十，生活场景百分之二十"><span></span><span></span></div><div class="mixlabels"><span>80% 工作 / 面试</span><span>20% 生活 / 旅行</span></div><div class="chips"><span class="chip">需求讨论</span><span class="chip">架构与取舍</span><span class="chip">项目经历</span><span class="chip">日常沟通</span></div></section>
-    <section class="panel"><h3>每周 10 小时，形成闭环</h3><div class="time-list"><span>视频理解与精听</span><span>2 小时</span><span>跟读、背诵与复述</span><span>2.5 小时</span><span>表达、语法与自测</span><span>1.5 小时</span><span>外教对话与发音纠正</span><span>3 小时</span><span>测评与复习</span><span>1 小时</span></div></section></div>
-    <section class="panel"><h3>下一章，由你的表现决定</h3><ol class="steps"><li>你确认本章学得差不多，准备参加测试。</li><li>GPT 外教用新场景考核，给出有证据的评分与发音反馈。</li><li>你把报告带回本项目，复核后更新正式成绩，再选新课或补练。</li></ol><p class="muted small-text">约 260 小时是训练投入，不是语言等级保证。当前 B1 为自评；口语基线仍待诊断。半年后可再加入印度英语等口音训练。</p></section>`;
-}
-
 function safeUrl(value) {
   try { const url = new URL(value); return url.protocol === 'https:' ? url.href : ''; } catch { return ''; }
 }
@@ -81,17 +63,20 @@ function quizMarkup() {
 }
 
 function lessonView() {
-  return `${heading('本章学习', `CHAPTER ${escape(lesson.number)} · ${lesson.source.status === 'verified' ? '视频与配套练习' : '原创练习示范'}`)}
-    <section class="lesson-header"><p class="eyebrow">${escape(lesson.category)} · ${escape(lesson.level)}</p><h1>${escape(lesson.number)} / ${escape(lesson.title)}</h1><p class="english-title" lang="en">${escape(lesson.englishTitle)}</p><p class="summary">${escape(lesson.summary)}</p></section>
-    <nav class="subnav" aria-label="本章内容"><a href="#lesson/video">视频</a><a href="#lesson/text">课文</a><a href="#lesson/words">核心词汇</a><a href="#lesson/grammar">句型语法</a><a href="#lesson/pronunciation">发音</a><a href="#lesson/quiz">自测</a><a href="#tutor">外教陪练 ↗</a></nav>
-    <section class="panel"><h3>本章要做到</h3>${list(lesson.goals)}<p class="muted small-text">可以跨周完成。本章未正式测评，没有预设成绩。</p></section>
-    <section class="panel" id="video"><div class="section-header" style="margin-top:0"><h2>先听，再开口</h2><span>视频来源核实后启用播放器</span></div>${videoSection()}</section>
-    <section class="panel" id="text"><div class="status-row"><h2>理解这段对话</h2><button class="button secondary small" id="toggle-translation" aria-pressed="false">隐藏中文</button></div><p class="muted small-text">原创配套课文 · 非外部视频逐字稿。先理解，再背核心表达，最后脱稿复述。</p><ol class="transcript">${lesson.text.map(line => `<li><span class="speaker">${escape(line.speaker)}</span><p class="english" lang="en">${escape(line.en)}</p><p class="translation">${escape(line.zh)}</p></li>`).join('')}</ol></section>
-    <section class="panel" id="words"><h2>核心词汇与搭配</h2><p class="muted small-text">IPA 为美音参考；发音练习点不是对你个人错误的判断。</p><div class="vocab-grid">${lesson.vocabulary.map(word => `<article class="vocab-card"><h3 lang="en">${escape(word.word)}</h3><span class="ipa">${escape(word.ipa)}</span><p class="meaning">${escape(word.meaning)}</p><p class="example" lang="en">${escape(word.example)}</p><p class="note">${escape(word.note)}</p></article>`).join('')}</div></section>
-    <section class="panel" id="grammar"><h2>把句型变成自己的表达</h2>${lesson.patterns.map(pattern => `<article class="pattern"><h3>${escape(pattern.form)}</h3><p>${escape(pattern.explanation)}</p><p class="example" lang="en">${escape(pattern.example)}</p>${pattern.contrast ? `<p class="muted small-text">${escape(pattern.contrast)}</p>` : ''}</article>`).join('')}</section>
-    <section class="panel" id="pronunciation"><h2>发音，要认真练到稳定</h2><p class="muted">让外教先听真实音频，再选 1—3 个重点纠正。单词 → 短语 → 句子 → 新场景，复测后才判断掌握。</p>${list(lesson.pronunciationTargets)}<div class="notice">只有文字转写时，不能判断发音或口语流畅度。请外教说明实际音频分析能力；没有依据的项目保持未评估。</div><h3>本章核心背诵</h3><div class="memorize" lang="en">${list(lesson.memorize)}</div></section>
-    <section class="panel" id="quiz"><h2>检查你的理解</h2><p class="muted small-text">做完再看解析。这里的成绩只反映知识练习，不作为口语过关依据。</p>${quizMarkup()}</section>
-    <section class="panel green"><h2>现在，把它用在对话里。</h2><p class="muted">练习追问、复述和确认。外教会用新的场景测试你，听发音，并留下具体反馈。</p><a class="button" href="#tutor">获取本章外教指令 ↗</a></section>`;
+  return `<section class="content-section"><div class="section-title"><h3>本周目标</h3><span class="muted small-text">${escape(lesson.level)}</span></div><ul class="goals">${lesson.goals.map(goal => `<li>${escape(goal)}</li>`).join('')}</ul></section>
+    <section class="content-section" id="video">${videoSection()}</section>
+    <section class="content-section" id="text"><div class="status-row"><h3>本周课文 <span class="heading-en">${escape(lesson.englishTitle)}</span></h3><button class="button secondary small" id="toggle-translation" aria-pressed="false">隐藏中文</button></div><p class="muted small-text">原创练习 · 非视频逐字稿。理解 → 背诵核心表达 → 脱稿复述。</p><ol class="transcript">${lesson.text.map(line => `<li><span class="speaker">${escape(line.speaker)}</span><p class="english" lang="en">${escape(line.en)}</p><p class="translation">${escape(line.zh)}</p></li>`).join('')}</ol></section>
+    <div class="actions"><a class="button" href="#language">接着练词汇与句型 →</a></div>`;
+}
+
+function languageView() {
+  return `<section class="content-section" id="words"><h3>核心词汇与搭配</h3><p class="muted small-text">结合例句记忆，再换成你自己的工作场景。</p><div class="vocab-list">${lesson.vocabulary.map(word => `<article class="vocab-row"><div><h4 lang="en">${escape(word.word)}</h4><span class="ipa">${escape(word.ipa)}</span><p class="meaning">${escape(word.meaning)}</p></div><div><p class="example" lang="en">${escape(word.example)}</p><p class="muted small-text">${escape(word.note)}</p></div></article>`).join('')}</div></section>
+    <section class="content-section" id="grammar"><h3>把句型变成自己的表达</h3>${lesson.patterns.map(pattern => `<article class="pattern"><h4>${escape(pattern.form)}</h4><p>${escape(pattern.explanation)}</p><p class="example" lang="en">${escape(pattern.example)}</p>${pattern.contrast ? `<p class="muted small-text">${escape(pattern.contrast)}</p>` : ''}</article>`).join('')}</section>
+    <section class="content-section" id="pronunciation"><h3>美音练习重点</h3><p class="muted">请外教听真实音频，选 1—3 个重点纠正，再用新句复测。这些是观察目标，并非已发现的个人错误。</p>${list(lesson.pronunciationTargets)}<h4>本周核心背诵</h4><div class="memorize" lang="en">${list(lesson.memorize)}</div></section><div class="actions"><a href="#quiz" class="button">做一轮巩固练习 →</a></div>`;
+}
+
+function quizView() {
+  return `<section class="content-section"><h3>检查你的理解</h3><p class="muted">做完再看解析。知识练习不计入口语成绩或学习进度。</p>${quizMarkup()}</section><div class="actions"><a href="#tutor" class="inline-link">练会了，找外教聊一聊 →</a></div>`;
 }
 
 const diagnostic = `你是我的英语口语外教。我自评约 B1，计划半年每周学习 10 小时，80% 工作会议/技术面试、20% 生活，当前发音参考 General American。
@@ -107,7 +92,7 @@ function tutorPrompt() {
 --- 当前课程（请以本段约束本次教学） ---
 lessonId: ${lesson.id}
 标题：${lesson.title} / ${lesson.englishTitle}
-素材状态：原创练习；视频待核实。没有视频字幕，请勿声称已看过或听过外部视频。
+素材状态：${lesson.source.status === 'verified' ? `已核实的视频来源：${lesson.source.title}（${lesson.source.url}）。仅凭本指令不得声称已观看或听过视频。` : '原创练习；视频待核实。没有视频字幕，请勿声称已看过或听过外部视频。'}
 目标：${lesson.goals.join('；')}
 学习者在网页中的自评准备状态：${ready ? '已勾选准备好，请在正式测试前再次口头确认。' : '尚未确认准备好，先进行陪练，不直接判定过关。'}
 
@@ -133,22 +118,31 @@ ${JSON.stringify(feedbackTemplate(lesson.id), null, 2)}
 }
 
 function tutorView() {
-  return `${heading('GPT 外教', `本课专属 · CHAPTER ${escape(lesson.number)}`)}
-    <section class="lesson-header"><p class="eyebrow">PRACTICE → FEEDBACK → PRACTICE</p><h1>让外教认真听，也认真纠正。</h1><p class="summary">把这份指令复制到 GPT。本章目标、课文、发音重点、考核要求和报告格式都已包含。</p></section>
-    <div class="grid-two"><section class="panel"><h3>先练习，再独立测试</h3><ol class="steps"><li>说明你想陪练，还是已经准备好正式测试。</li><li>每次一个问题，尝试用本章表达完成交流。</li><li>让外教指出真实问题，练习后再换句复测。</li><li>测试结束，复制 JSON 报告到“反馈与记录”。</li></ol></section><section class="panel"><h3>三个发音关注点</h3><p><strong>可理解度</strong> · 听者能否轻松理解？</p><p><strong>美音准确度</strong> · 目标音素和词重音是否稳定？</p><p><strong>自然度</strong> · 句重音、意群和节奏是否合适？</p><p class="muted small-text">认真改进，方便将来向孩子示范。不要求消除所有口音；音频证据不足时先重录，无法验证则不评分。</p></section></div>
-    <section class="panel"><h2>第一次开始：做口语诊断</h2><p class="muted">先了解你的真实起点。诊断与本课过关测试分开，不预填成绩。</p><details><summary>展开基线诊断指令</summary><label class="sr-only" for="diagnostic-prompt">基线诊断指令</label><textarea class="prompt-box" id="diagnostic-prompt" readonly>${escape(diagnostic)}</textarea><div class="actions"><button class="button secondary" id="copy-diagnostic">复制诊断指令</button></div></details></section>
-    <section class="panel"><div class="status-row"><h2>${escape(lesson.number)} · ${escape(lesson.title)}</h2><span class="badge neutral">每课独立指令</span></div><label class="check-label"><input type="checkbox" id="ready-check" ${ready ? 'checked' : ''}><span>我觉得本章练得差不多了，准备接受正式测试。<br><small class="muted">仅记录本人意愿，不代表外教已测评或已过关。</small></span></label><label class="form-label" for="tutor-prompt">完整外教指令</label><textarea id="tutor-prompt" class="prompt-box" readonly>${escape(tutorPrompt())}</textarea><div class="actions"><button class="button" id="copy-tutor">复制本课指令 ↗</button><a href="#progress" class="button secondary">填写外教反馈</a></div><p class="muted small-text" style="margin-top:15px">建议使用能分析实际音频的会话。网页本身不会录音、连接 GPT 或分析你的发音。</p></section>
-    <section class="panel"><h3>本章公开陪练场景</h3>${list(lesson.practiceScenarios)}<p class="muted small-text">正式测试会另出至少两个新场景，不直接复用这些题，也不先给目标答案。</p><details><summary>查看本课空白反馈模板</summary><label class="sr-only" for="feedback-template">本课 JSON 反馈模板</label><textarea id="feedback-template" class="prompt-box" readonly>${escape(JSON.stringify(feedbackTemplate(lesson.id), null, 2))}</textarea><div class="actions"><button id="copy-template" class="button secondary">复制空白模板</button></div></details></section>`;
+  return `<section class="content-section"><h3>本周外教陪练</h3><p class="muted">复制指令到 GPT 语音会话：先用本周表达练对话，再独立测试。外教需要认真纠正发音，并在新句中复测。</p><details><summary>第一次开始？先做 10—15 分钟口语诊断</summary><textarea class="prompt-box" id="diagnostic-prompt" aria-label="基线诊断指令" readonly>${escape(diagnostic)}</textarea><div class="actions"><button class="button secondary" id="copy-diagnostic">复制诊断指令</button></div></details>
+    <label class="check-label"><input type="checkbox" id="ready-check" ${ready ? 'checked' : ''}><span>我觉得本周练得差不多了，准备接受正式测试。<small class="muted">仅记录你的准备状态，测评通过并复核后才更新进度。</small></span></label><label class="form-label" for="tutor-prompt">本周专属外教指令</label><textarea id="tutor-prompt" class="prompt-box" readonly>${escape(tutorPrompt())}</textarea><div class="actions"><button class="button" id="copy-tutor">复制本课指令 ↗</button><a href="#progress" class="button secondary">带回外教反馈</a></div><p class="muted small-text">请使用能分析真实音频的会话；只有文字转写时，不评估发音和口语流畅度。</p></section>
+    <section class="content-section"><h3>用这些场景热身</h3>${list(lesson.practiceScenarios)}<p class="muted small-text">正式测试另出至少两个新场景，不提前给答案。</p><details><summary>本周反馈模板</summary><textarea id="feedback-template" class="prompt-box" aria-label="本课 JSON 反馈模板" readonly>${escape(JSON.stringify(feedbackTemplate(lesson.id), null, 2))}</textarea><div class="actions"><button id="copy-template" class="button secondary">复制空白模板</button></div></details></section>`;
 }
 
 function progressView() {
   const record = progress.records.find(item => item.lessonId === lesson.id);
-  const statusLabel = { not_assessed: '尚未测评', needs_practice: '需要补练', passed: '已复核通过' }[record?.status] || '待核对';
-  return `${heading('反馈与记录', '本地反馈 ≠ 正式成绩')}
-    <section class="lesson-header"><p class="eyebrow">KEEP THE EVIDENCE. SEE THE PROGRESS.</p><h1>让每一次练习，留下依据。</h1><p class="summary">把外教报告带回来，复核后再更新正式结果和下一章安排。</p></section>
-    <section class="panel"><div class="status-row"><h2>本章正式记录</h2><span class="badge neutral">${statusLabel}</span></div><p class="muted">${escape(record?.summary || '尚无正式记录。')}</p>${scoreCards(record?.scores)}<p class="small-text muted" style="margin-top:15px">${record?.total != null ? `正式总分：${escape(record.total)} / 100` : '总分：未评估'} · ${record?.reviewedAt ? `复核日期：${escape(record.reviewedAt)}` : '暂无复核日期'}</p>${record?.history?.length ? `<details><summary>历史测评摘要</summary>${record.history.map(item => `<p>${escape(item.assessedAt)} · ${escape(item.summary)}</p>`).join('')}</details>` : ''}</section>
-    <section class="panel"><h2>粘贴本课外教反馈</h2><p class="muted">复制外教输出的完整 JSON，可包含代码块。保存后仅留在当前浏览器；你仍需把报告发回项目维护对话。</p><label class="form-label" for="feedback-input">第 ${escape(lesson.number)} 课 · JSON 报告</label><textarea class="prompt-box feedback-box" id="feedback-input" spellcheck="false" placeholder="在这里粘贴外教填写的 JSON 报告…">${escape(feedbackText)}</textarea><div class="actions"><button class="button" id="validate-feedback">校验报告</button><button class="button secondary" id="save-feedback">暂存本浏览器</button><button class="button secondary" id="download-feedback">下载 JSON</button></div><div id="feedback-result" class="feedback-result" role="status" aria-live="polite"></div><div class="notice">网页只核对格式和过关条件，不能验证报告真实性。即使满足门槛，也只是待复核；不会自动更改正式分数或解锁下一章。</div><p class="small-text muted">换设备时，可粘贴已下载的 JSON 恢复。公开仓库只记录脱敏摘要；不要提交录音、真实同事姓名、公司机密或未经脱敏的个人报告。</p></section>
-    <section class="panel"><h3>什么时候推荐下一章？</h3><p>本人确认准备好，外教独立测评有足够证据，并经复核通过。五项各 0—5 分，总分至少 80/100；每项至少 3 分，任务完成和发音至少 4 分。</p><p class="muted">还需真实音频、至少两个新场景、无辅导提示，以及稳定的发音复测记录。缺少项目时不计算完整总分，先补测或补练。</p><a class="inline-link" href="./docs/tutor-rules.md">完整外教规则 ↗</a></section>`;
+  const statusLabel = { not_assessed: '尚未测评', needs_practice: '需要补练', passed: '已复核通过' }[record?.status] || '待测评';
+  return `<section class="content-section"><div class="status-row"><h3>本周正式成绩</h3><span class="badge neutral">${statusLabel}</span></div><p class="muted">${escape(record?.summary || '尚无正式记录。')}</p>${scoreCards(record?.scores)}<p class="small-text muted">${record?.total != null ? `正式总分：${escape(record.total)} / 100` : '总分：未评估'} · ${record?.reviewedAt ? `复核日期：${escape(record.reviewedAt)}` : '暂无复核日期'}</p>${record?.history?.length ? `<details><summary>历史测评摘要</summary>${record.history.map(item => `<p>${escape(item.assessedAt)} · ${escape(item.summary)}</p>`).join('')}</details>` : ''}</section>
+    <section class="content-section"><h3>带回本周外教反馈</h3><p class="muted">粘贴 GPT 的 JSON 报告，在这里检查并备份，再发回我们的对话。复核通过后，我会更新上方进度并安排下一周课程。</p><label class="form-label" for="feedback-input">第 ${escape(lesson.week)} 周 · 外教报告</label><textarea class="prompt-box feedback-box" id="feedback-input" spellcheck="false" placeholder="粘贴外教填写的完整 JSON 报告…">${escape(feedbackText)}</textarea><div class="actions"><button class="button" id="validate-feedback">校验报告</button><button class="button secondary" id="save-feedback">暂存本浏览器</button><button class="button secondary" id="download-feedback">下载 JSON</button></div><div id="feedback-result" class="feedback-result" role="status" aria-live="polite"></div><p class="notice">这里校验格式与过关条件；正式成绩须回到对话中复核。暂存报告不会自动更新进度。</p><details><summary>过关标准与反馈隐私</summary><p>本人确认准备好，确实分析原始音频，至少两个新场景，无辅导提示。五项均 ≥3，任务与发音 ≥4，总分 ≥80，并有实际表现和稳定发音复测的证据。信息不足时先补测。</p><p>报告暂存仅保留在本浏览器。换设备可粘贴下载的 JSON 恢复。公开记录只保留脱敏摘要，不提交录音、公司机密或个人原始报告。</p><a href="./docs/tutor-rules.md" class="inline-link">完整外教规则 ↗</a></details></section>`;
+}
+
+function updateJourney() {
+  const state = learningProgress(lessons, progress);
+  document.querySelector('#passed-weeks').textContent = state.completed;
+  document.querySelector('#progress-percent').textContent = `${state.percent}%`;
+  const bar = document.querySelector('#learning-progress');
+  bar.max = state.total; bar.value = state.completed;
+  document.querySelector('.progress-number > span').textContent = `/ ${state.total} 周`;
+  document.querySelector('#progress-description').textContent = `已复核通过 ${state.completed} 周。${state.completed === state.total ? '半年计划已完成，可以回顾学习成果。' : '每次通过后，更新进度并安排下一课。'}`;
+  document.querySelector('#week-label').textContent = `WEEK ${String(lesson.week).padStart(2, '0')} / 本周课程`;
+  document.querySelector('#week-title').textContent = lesson.title;
+  document.querySelector('#week-summary').textContent = lesson.summary;
+  const record = progress.records.find(item => item.lessonId === lesson.id);
+  document.querySelector('#week-status').textContent = record?.status === 'passed' && record.reviewedAt ? '已复核通过' : record?.status === 'needs_practice' ? '继续补练' : '待测评';
 }
 
 function showFeedback(result) {
@@ -162,7 +156,7 @@ function showFeedback(result) {
 }
 
 function bindEvents() {
-  if (view === 'lesson') {
+  {
     document.querySelector('#toggle-translation').addEventListener('click', event => {
       const hidden = event.currentTarget.getAttribute('aria-pressed') !== 'true';
       event.currentTarget.setAttribute('aria-pressed', String(hidden));
@@ -181,7 +175,7 @@ function bindEvents() {
       document.querySelector('#quiz-summary').textContent = '';
     });
   }
-  if (view === 'tutor') {
+  {
     for (const [button, textarea] of [['copy-tutor', 'tutor-prompt'], ['copy-diagnostic', 'diagnostic-prompt'], ['copy-template', 'feedback-template']]) document.querySelector(`#${button}`).addEventListener('click', () => { const element = document.querySelector(`#${textarea}`); copyText(element.value, element); });
     document.querySelector('#ready-check').addEventListener('change', event => {
       ready = event.currentTarget.checked;
@@ -189,7 +183,7 @@ function bindEvents() {
       document.querySelector('#tutor-prompt').value = tutorPrompt();
     });
   }
-  if (view === 'progress') {
+  {
     const input = document.querySelector('#feedback-input');
     input.addEventListener('input', () => { feedbackText = input.value; document.querySelector('#feedback-result').textContent = ''; });
     document.querySelector('#validate-feedback').addEventListener('click', () => showFeedback(parseReport(input.value, lesson.id)));
@@ -203,24 +197,41 @@ function bindEvents() {
   }
 }
 
-function route(initial = false) {
+const tabViews = ['lesson', 'language', 'quiz', 'tutor', 'progress'];
+function route(navigate = false) {
   const [requested, anchor] = location.hash.slice(1).split('/');
-  const next = ['overview', 'lesson', 'tutor', 'progress'].includes(requested) ? requested : 'overview';
-  const changed = view !== next;
-  if (changed) {
-    view = next;
-    app.innerHTML = { overview, lesson: lessonView, tutor: tutorView, progress: progressView }[view]();
-    document.title = `${{ overview: '学习方向', lesson: lesson.title, tutor: 'GPT 外教', progress: '反馈与记录' }[view]} · Speak at Work`;
-    document.querySelectorAll('[data-view]').forEach(link => {
-      const active = link.dataset.view === view;
-      link.classList.toggle('active', active);
-      if (active) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
-    });
-    bindEvents();
-    if (!initial) document.querySelector('#main').focus({ preventScroll: true });
+  let next = tabViews.includes(requested) ? requested : 'lesson';
+  if (requested === 'lesson' && ['words', 'grammar', 'pronunciation'].includes(anchor)) next = 'language';
+  if (requested === 'lesson' && anchor === 'quiz') next = 'quiz';
+  view = next;
+  document.querySelectorAll('[data-view]').forEach(tab => {
+    const active = tab.dataset.view === view;
+    tab.setAttribute('aria-selected', String(active));
+    tab.tabIndex = active ? 0 : -1;
+    document.querySelector(`#panel-${tab.dataset.view}`).hidden = !active;
+  });
+  document.title = '码农口语提升指南';
+  if (anchor) document.getElementById(anchor)?.scrollIntoView({ block: 'start' });
+  else if (navigate) {
+    document.querySelector(`#tab-${view}`).focus({ preventScroll: true });
+    document.querySelector('.tabs').scrollIntoView({ block: 'start' });
   }
-  if (anchor && view === 'lesson' && ['video', 'text', 'words', 'grammar', 'pronunciation', 'quiz'].includes(anchor)) document.getElementById(anchor)?.scrollIntoView();
-  else if (changed) window.scrollTo(0, 0);
+}
+
+function setupTabs() {
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  for (const tab of tabs) {
+    tab.addEventListener('click', () => { history.replaceState(null, '', `#${tab.dataset.view}`); route(); });
+    tab.addEventListener('keydown', event => {
+      let index = tabs.indexOf(tab);
+      if (event.key === 'ArrowRight') index = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft') index = (index - 1 + tabs.length) % tabs.length;
+      else if (event.key === 'Home') index = 0;
+      else if (event.key === 'End') index = tabs.length - 1;
+      else return;
+      event.preventDefault(); tabs[index].click(); tabs[index].focus();
+    });
+  }
 }
 
 async function load(path, json = true) {
@@ -236,19 +247,22 @@ try {
   if (!lesson || !Array.isArray(progress.records)) throw new Error('课程或记录格式不完整。');
   ready = readLocal(`speak-ready-${lesson.id}`) === 'true';
   feedbackText = readLocal(`speak-feedback-${lesson.id}`) || '';
-  document.querySelector('.chapter-link').innerHTML = `<span class="chapter-num">${escape(lesson.number)}</span><span>${escape(lesson.title)}<small>${escape(lesson.englishTitle)}</small></span>`;
-  document.querySelector('.sidebar-course .badge').textContent = lesson.source.status === 'verified' ? '视频与配套练习' : '原创练习 · 视频待核实';
+  updateJourney();
   const selector = document.querySelector('#lesson-select');
-  selector.innerHTML = lessons.map(item => `<option value="${escape(item.id)}" ${item.id === lesson.id ? 'selected' : ''}>${escape(item.number)} · ${escape(item.title)}</option>`).join('');
+  selector.innerHTML = lessons.map(item => `<option value="${escape(item.id)}" ${item.id === lesson.id ? 'selected' : ''}>第 ${escape(item.week)} 周 · ${escape(item.title)}</option>`).join('');
   selector.addEventListener('change', () => {
     const target = new URL(location.href);
     target.searchParams.set('lesson', selector.value);
     target.hash = 'lesson';
     location.assign(target.href);
   });
-  route(true);
-  window.addEventListener('hashchange', () => route());
+  const renderers = { lesson: lessonView, language: languageView, quiz: quizView, tutor: tutorView, progress: progressView };
+  app.innerHTML = tabViews.map(name => `<div id="panel-${name}" role="tabpanel" aria-labelledby="tab-${name}" tabindex="0" hidden>${renderers[name]()}</div>`).join('');
+  bindEvents();
+  setupTabs();
+  route();
+  window.addEventListener('hashchange', () => route(true));
 } catch (error) {
-  app.innerHTML = `<section class="panel"><h1>学习内容暂时无法加载</h1><p>${escape(error.message)}</p><p>请通过 HTTP 服务打开网页，并确认 data 与 docs 目录和网页一起部署。</p><button class="button" id="retry-load">重新加载</button></section>`;
+  app.innerHTML = `<section class="loading"><h3>学习内容暂时无法加载</h3><p>${escape(error.message)}</p><p>请通过 HTTP 服务打开网页，并确认 data 与 docs 目录和网页一起部署。</p><button class="button" id="retry-load">重新加载</button></section>`;
   document.querySelector('#retry-load').addEventListener('click', () => location.reload());
 }

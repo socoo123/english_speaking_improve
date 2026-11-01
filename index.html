@@ -3,42 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="每周 10 小时，以美式英语为目标，用半年练习工作会议、技术面试和真实交流。">
-  <meta name="theme-color" content="#193a36">
-  <title>Speak at Work · 半年英语口语计划</title>
+  <meta name="description" content="每周 10 小时，用半年练习工作会议与技术面试中的美式英语表达。">
+  <meta name="theme-color" content="#edf4e9">
+  <title>码农口语提升指南</title>
   <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/fonts/noto.css">
   <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">跳到学习内容</a>
-  <header class="site-header">
-    <a class="brand" href="#overview"><span class="brand-mark" aria-hidden="true">S<span>↗</span></span><span>Speak at Work<small>英语，练到能用。</small></span></a>
-    <span class="header-note">MY ENGLISH PRACTICE <span class="dot"></span> 26 WEEKS</span>
-    <a class="text-link" href="https://github.com/socoo123/english_speaking_improve" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-  </header>
-  <div class="layout">
-    <aside class="sidebar" aria-label="学习导航">
-      <p class="eyebrow">YOUR LEARNING SPACE</p>
-      <nav class="nav">
-        <a href="#overview" data-view="overview"><span>◉</span> 学习方向</a>
-        <a href="#lesson" data-view="lesson"><span>▤</span> 本章学习</a>
-        <a href="#tutor" data-view="tutor"><span>◇</span> GPT 外教</a>
-        <a href="#progress" data-view="progress"><span>↗</span> 反馈与记录</a>
-      </nav>
-      <div class="sidebar-course">
-        <p class="eyebrow">CURRENT CHAPTER</p>
-        <a href="#lesson" class="chapter-link"><span class="chapter-num">01</span><span>把需求问清楚<small>Clarify the requirement</small></span></a>
-        <span class="badge neutral">原创练习 · 视频待核实</span>
-        <p class="sidebar-hint">下一章会根据你的测试反馈推荐，按掌握程度推进。</p>
-      </div>
-      <div class="sidebar-footer"><span class="tiny-label">PRONUNCIATION FOCUS</span><strong>General American</strong><p>说清楚，也说得更自然。</p></div>
-    </aside>
+  <a class="skip-link" href="#main">跳到本周课程</a>
+  <div class="site-shell">
+    <header class="site-header"><a class="brand" href="#lesson"><span class="brand-mark" aria-hidden="true">a<span>↗</span></span><span>码农口语提升指南</span></a><a class="repo-link" href="https://github.com/socoo123/english_speaking_improve" target="_blank" rel="noopener noreferrer">GitHub ↗</a></header>
     <main id="main" tabindex="-1">
-      <div class="lesson-picker"><label for="lesson-select">当前章节</label><select id="lesson-select" aria-label="切换课程"><option>正在加载…</option></select></div>
-      <div id="app"><div class="panel"><h1>正在准备学习内容…</h1><p>课程与记录从本站加载。</p></div></div>
-      <noscript><p class="panel">请启用 JavaScript 使用课程和自测。也可在 GitHub 阅读 docs 中的目标和外教规则。</p></noscript>
-      <footer class="page-footer">A little practice. A clearer voice.<span>原创练习 · 动态选课 · 认真反馈</span></footer>
+      <section class="journey glass" aria-labelledby="site-title">
+        <div class="journey-copy"><p class="eyebrow">SPEAK A LITTLE. GROW EVERY WEEK.</p><h1 id="site-title">码农口语提升指南<span>从写代码，到聊方案。</span></h1><p class="intro">半年时间，把英语练进工作里。<br>每周学一课，练到能用，再继续。</p><div class="tags"><span class="tag green">B1 起步 · 美音</span><span class="tag orange">每周 10 小时</span><span class="tag coral">80% 工作 · 20% 生活</span></div></div>
+        <div class="journey-progress"><div class="progress-caption"><span>半年学习进度</span><span id="progress-percent">0%</span></div><p class="progress-number"><strong id="passed-weeks">0</strong><span>/ 26 周</span></p><progress id="learning-progress" max="26" value="0" aria-label="已复核通过的学习周次"></progress><p id="progress-description">完成外教测评并复核通过后，更新进度。</p><details class="plan-details"><summary>每周怎么安排 10 小时？</summary><p>精听 2h · 跟读背诵 2.5h · 表达与自测 1.5h · 外教陪练 3h · 测评复习 1h。可以跨周补练，掌握后再推进。</p></details></div>
+      </section>
+      <section class="course glass" aria-labelledby="week-title">
+        <header class="course-header"><div><p class="eyebrow" id="week-label">WEEK 01 / 本周课程</p><h2 id="week-title">正在加载课程…</h2><p id="week-summary"></p></div><div class="week-picker"><label for="lesson-select">学习周次</label><select id="lesson-select"><option>第 1 周</option></select><span id="week-status" class="week-status">待测评</span></div></header>
+        <div class="tabs" role="tablist" aria-label="本周学习内容">
+          <button id="tab-lesson" type="button" role="tab" data-view="lesson" aria-controls="panel-lesson" aria-selected="true">课文与视频</button>
+          <button id="tab-language" type="button" role="tab" data-view="language" aria-controls="panel-language" aria-selected="false" tabindex="-1">词汇与句型</button>
+          <button id="tab-quiz" type="button" role="tab" data-view="quiz" aria-controls="panel-quiz" aria-selected="false" tabindex="-1">巩固练习</button>
+          <button id="tab-tutor" type="button" role="tab" data-view="tutor" aria-controls="panel-tutor" aria-selected="false" tabindex="-1">外教陪练</button>
+          <button id="tab-progress" type="button" role="tab" data-view="progress" aria-controls="panel-progress" aria-selected="false" tabindex="-1">反馈与进度</button>
+        </div>
+        <div id="app"><p class="loading">正在准备本周学习内容…</p></div>
+        <noscript><p>请启用 JavaScript 查看课程，或到 GitHub 阅读学习文档。</p></noscript>
+      </section>
+      <p class="next-week-note"><span aria-hidden="true">↗</span> 下一周，根据你的表现来安排。把外教反馈发给我，复核通过后更新进度并生成新课。</p>
     </main>
+    <footer class="site-footer"><span>一周一课，学到能用。</span><span>26 周 · 约 260 小时 · 不赶进度</span></footer>
   </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script type="module" src="./assets/app.mjs"></script>

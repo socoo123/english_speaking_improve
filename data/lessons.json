@@ -216,6 +216,7 @@
         "answer": 2,
         "explanation": "明确时间上限比 nice 或 fast 更容易验证。"
       }
-    ]
+    ],
+    "week": 1
   }
 ]

@@ -10,3 +10,5 @@
 - Downloadable captions do not establish republication rights. Record source URLs, license scope, attribution, verification date and limitations. Label original exercises as original.
 - Preserve relative URLs and GitHub Pages subpath support. Keep this static site dependency-free unless functionality requires otherwise.
 - Validate using node --test tests/*.test.mjs, an HTTP smoke check and browser checks for affected interactions.
+
+- Keep the single weekly-course homepage and its content tabs. Each lesson needs an explicit integer week (1–26). The progress bar counts only officially reviewed passed weeks; if a week has multiple lessons, all must pass. After reviewing feedback and learner confirmation, update anonymized official results/history and add the next week with its own tutor prompt inputs. Never advance progress from local drafts or quiz results.
