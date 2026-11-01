@@ -1,0 +1,221 @@
+[
+  {
+    "id": "01",
+    "number": "01",
+    "title": "把需求问清楚",
+    "englishTitle": "Clarify the requirement",
+    "category": "工作 · 需求讨论",
+    "level": "B1 → B1+",
+    "status": "practice_draft",
+    "summary": "面对一句 “We need an export feature”，先问清用户、范围与完成标准，再讨论实现。",
+    "goals": [
+      "用礼貌追问澄清模糊需求",
+      "确认第一版范围并复述共识",
+      "把重点表达用到两个新场景中"
+    ],
+    "source": {
+      "status": "pending",
+      "youtubeId": null,
+      "title": null,
+      "url": null,
+      "transcriptUrl": null,
+      "licenseUrl": null,
+      "licenseSummary": null,
+      "verifiedAt": null,
+      "duration": null,
+      "notes": "视频待选定与许可核实；以下课文为原创练习，不是视频字幕。优先 2—5 分钟、清晰美音、有合法可用字幕的课程。"
+    },
+    "text": [
+      {
+        "speaker": "Alex · Engineer",
+        "en": "Before we discuss the solution, could you clarify who will use this feature?",
+        "zh": "讨论方案之前，可以先明确一下谁会使用这个功能吗？"
+      },
+      {
+        "speaker": "Taylor · Product manager",
+        "en": "Our support team needs to export customer reports. Right now, they copy the data by hand.",
+        "zh": "客服团队需要导出客户报表。目前，他们在手动复制数据。"
+      },
+      {
+        "speaker": "Alex · Engineer",
+        "en": "What problem are we trying to solve? Is the main goal to save time or to reduce errors?",
+        "zh": "我们要解决什么问题？主要目标是节省时间，还是减少错误？"
+      },
+      {
+        "speaker": "Taylor · Product manager",
+        "en": "Both, but saving time is the priority. They need a simple CSV file for their weekly review.",
+        "zh": "两者都有，不过节省时间是优先事项。他们每周复盘需要一个简单的 CSV 文件。"
+      },
+      {
+        "speaker": "Alex · Engineer",
+        "en": "Let me make sure I understand. For the first version, we only need a CSV export. We don't need a dashboard yet. Is that right?",
+        "zh": "我确认一下是否理解正确。第一版只需要 CSV 导出，暂时不需要仪表盘，对吗？"
+      },
+      {
+        "speaker": "Taylor · Product manager",
+        "en": "That's right. A dashboard can wait.",
+        "zh": "对，仪表盘可以以后再做。"
+      },
+      {
+        "speaker": "Alex · Engineer",
+        "en": "How will we know it's working as expected? We should agree on the acceptance criteria before we estimate the work.",
+        "zh": "怎样判断它符合预期？估算工作量之前，我们应该先就验收标准达成一致。"
+      },
+      {
+        "speaker": "Taylor · Product manager",
+        "en": "The file should include the selected date range, and the export should finish within ten seconds.",
+        "zh": "文件应包含所选日期范围内的数据，导出应在十秒内完成。"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "clarify",
+        "ipa": "/ˈklærəfaɪ/",
+        "meaning": "澄清、说清楚",
+        "example": "Could you clarify what you mean by real-time updates?",
+        "note": "重音在第一音节 CLA；不要把练习目标当作已发现的个人错误。"
+      },
+      {
+        "word": "requirement",
+        "ipa": "/rɪˈkwaɪɚmənt/",
+        "meaning": "需求、要求",
+        "example": "Let's confirm the requirement before we choose a database.",
+        "note": "重音在第二音节；注意美式 /ɚ/。"
+      },
+      {
+        "word": "priority",
+        "ipa": "/praɪˈɔrəti/",
+        "meaning": "优先事项",
+        "example": "Reliability is our top priority for this release.",
+        "note": "关注重读音节和非重读元音；不同美音说话者可能有元音差异。"
+      },
+      {
+        "word": "scope",
+        "ipa": "/skoʊp/",
+        "meaning": "范围",
+        "example": "Notifications are outside the scope of this version.",
+        "note": "词尾 /p/ 要保留闭塞，不额外添加元音；不必夸张爆破。"
+      },
+      {
+        "word": "acceptance criteria",
+        "ipa": "/əkˈsɛptəns kraɪˈtɪriə/",
+        "meaning": "验收标准",
+        "example": "What are the acceptance criteria for this feature?",
+        "note": "criteria 是 criterion 的复数；关注两个词各自的重读音节。"
+      },
+      {
+        "word": "trade-off",
+        "ipa": "/ˈtreɪdˌɔf/",
+        "meaning": "取舍、权衡",
+        "example": "There is a trade-off between speed and flexibility.",
+        "note": "用于后续架构讨论；本课为拓展词。"
+      }
+    ],
+    "patterns": [
+      {
+        "form": "Could you clarify + 疑问词从句?",
+        "explanation": "礼貌地请求澄清。从句采用陈述语序：who will use it / what the goal is。",
+        "example": "Could you clarify what the deadline is?",
+        "contrast": "避免：Could you clarify what is the deadline?"
+      },
+      {
+        "form": "Let me make sure I understand. + 复述 + Is that right?",
+        "explanation": "先复述理解，再请对方确认，比只说 OK 更能发现偏差。",
+        "example": "Let me make sure I understand. We need a read-only version first. Is that right?"
+      },
+      {
+        "form": "We should … before we …",
+        "explanation": "用 should 提出建议，用 before 说明先后顺序。",
+        "example": "We should check the risks before we commit to a date."
+      },
+      {
+        "form": "The … should … within …",
+        "explanation": "用 should 描述期望，用 within 给出明确上限；验收文件中可按团队惯例使用 must。",
+        "example": "The page should load within two seconds."
+      }
+    ],
+    "pronunciationTargets": [
+      "clarify / requirement / criteria：检查词重音是否稳定，再放进完整问题中。",
+      "scope、export 等词尾辅音：注意保留词尾，不随意增加元音；是否有问题须听实际音频。",
+      "Could you CLARIFY / who will USE this feature?：按意群说话，突出信息词；大小写仅标示练习重音。",
+      "Let me make sure I understand：练习自然节奏和意群，先清楚，再逐渐连贯。"
+    ],
+    "memorize": [
+      "Before we discuss the solution, could you clarify who will use this feature?",
+      "What problem are we trying to solve?",
+      "Let me make sure I understand. … Is that right?",
+      "We should agree on the acceptance criteria before we estimate the work."
+    ],
+    "practiceScenarios": [
+      "产品经理提出“给用户加通知”，你需要追问使用者、触发条件与第一版范围。",
+      "同事要求“让页面更快”，你需要问清当前问题、目标指标和验收方法。",
+      "生活迁移：预订酒店时，确认入住时间、早餐是否包含以及取消条件。"
+    ],
+    "assessmentFocus": "外教临时生成至少两个与练习不同的需求场景；加入范围变更或时间限制，观察能否追问、复述共识、确认可衡量的验收标准。不先给目标表达。",
+    "quiz": [
+      {
+        "id": "q1",
+        "type": "choice",
+        "question": "哪一句适合礼貌地澄清需求？",
+        "options": [
+          "Could you clarify what the main goal is?",
+          "Could you clarify what is the main goal?",
+          "You must explain all things now."
+        ],
+        "answer": 0,
+        "explanation": "Could you clarify 后的间接问句使用陈述语序：what the main goal is。"
+      },
+      {
+        "id": "q2",
+        "type": "choice",
+        "question": "对方说“我们要一个更快的系统”，最有帮助的下一步是？",
+        "options": [
+          "立即选一个新的数据库。",
+          "询问现在的响应时间、目标值与关键使用场景。",
+          "回答 OK，然后开始开发。"
+        ],
+        "answer": 1,
+        "explanation": "先把含糊目标转为可验证需求，再讨论实现。"
+      },
+      {
+        "id": "q3",
+        "type": "fill",
+        "question": "We should agree ___ the acceptance criteria.",
+        "answers": [
+          "on"
+        ],
+        "explanation": "agree on something：就某件事达成一致。"
+      },
+      {
+        "id": "q4",
+        "type": "fill",
+        "question": "The export should finish ___ ten seconds.（在十秒以内）",
+        "answers": [
+          "within"
+        ],
+        "explanation": "within + 时间段，表示不超过这个时间范围。"
+      },
+      {
+        "id": "q5",
+        "type": "fill",
+        "question": "Let me make ___ I understand.",
+        "answers": [
+          "sure"
+        ],
+        "explanation": "make sure：确认。复述共识后可接 Is that right?"
+      },
+      {
+        "id": "q6",
+        "type": "choice",
+        "question": "哪项是更明确的验收标准？",
+        "options": [
+          "The export should be nice.",
+          "The export should be fast.",
+          "The export should finish within ten seconds."
+        ],
+        "answer": 2,
+        "explanation": "明确时间上限比 nice 或 fast 更容易验证。"
+      }
+    ]
+  }
+]

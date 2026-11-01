@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": null,
+  "learner": {
+    "startingLevel": "B1（自评，待诊断）",
+    "target": "熟悉工作场景中的 B2 沟通能力",
+    "weeks": 26,
+    "hoursPerWeek": 10,
+    "workPercent": 80,
+    "accent": "General American"
+  },
+  "records": [
+    {
+      "lessonId": "01",
+      "status": "not_assessed",
+      "assessedAt": null,
+      "reviewedAt": null,
+      "scores": null,
+      "total": null,
+      "summary": "尚未收到外教测评报告；无正式成绩。",
+      "history": []
+    }
+  ]
+}

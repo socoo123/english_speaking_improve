@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="每周 10 小时，以美式英语为目标，用半年练习工作会议、技术面试和真实交流。">
+  <meta name="theme-color" content="#193a36">
+  <title>Speak at Work · 半年英语口语计划</title>
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到学习内容</a>
+  <header class="site-header">
+    <a class="brand" href="#overview"><span class="brand-mark" aria-hidden="true">S<span>↗</span></span><span>Speak at Work<small>英语，练到能用。</small></span></a>
+    <span class="header-note">MY ENGLISH PRACTICE <span class="dot"></span> 26 WEEKS</span>
+    <a class="text-link" href="https://github.com/socoo123/english_speaking_improve" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" aria-label="学习导航">
+      <p class="eyebrow">YOUR LEARNING SPACE</p>
+      <nav class="nav">
+        <a href="#overview" data-view="overview"><span>◉</span> 学习方向</a>
+        <a href="#lesson" data-view="lesson"><span>▤</span> 本章学习</a>
+        <a href="#tutor" data-view="tutor"><span>◇</span> GPT 外教</a>
+        <a href="#progress" data-view="progress"><span>↗</span> 反馈与记录</a>
+      </nav>
+      <div class="sidebar-course">
+        <p class="eyebrow">CURRENT CHAPTER</p>
+        <a href="#lesson" class="chapter-link"><span class="chapter-num">01</span><span>把需求问清楚<small>Clarify the requirement</small></span></a>
+        <span class="badge neutral">原创练习 · 视频待核实</span>
+        <p class="sidebar-hint">下一章会根据你的测试反馈推荐，按掌握程度推进。</p>
+      </div>
+      <div class="sidebar-footer"><span class="tiny-label">PRONUNCIATION FOCUS</span><strong>General American</strong><p>说清楚，也说得更自然。</p></div>
+    </aside>
+    <main id="main" tabindex="-1">
+      <div class="lesson-picker"><label for="lesson-select">当前章节</label><select id="lesson-select" aria-label="切换课程"><option>正在加载…</option></select></div>
+      <div id="app"><div class="panel"><h1>正在准备学习内容…</h1><p>课程与记录从本站加载。</p></div></div>
+      <noscript><p class="panel">请启用 JavaScript 使用课程和自测。也可在 GitHub 阅读 docs 中的目标和外教规则。</p></noscript>
+      <footer class="page-footer">A little practice. A clearer voice.<span>原创练习 · 动态选课 · 认真反馈</span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="./assets/app.mjs"></script>
+</body>
+</html>
