@@ -15,7 +15,7 @@
 
 ## 本地运行与验证
 
-要求 Python 3。网站无第三方运行依赖，不需要 API 密钥。
+网站由 HTML、CSS、JavaScript 和 JSON 静态文件组成，没有 Python 后端，也不需要 API 密钥。下面的 Python 3 命令仅用于本地预览；部署到 GitHub Pages 不需要安装或运行 Python。
 
 ```bash
 cd /workspace/english_speaking_improve
@@ -31,6 +31,8 @@ node --test tests/*.test.mjs
 ## GitHub Pages 发布
 
 在仓库 Settings → Pages 中选择 **Deploy from a branch**，分支选择 main，目录选择 / (root)。所有资源采用相对路径，适用于仓库子路径。不自动开启部署；推送代码不代表网站已发布。
+
+如果已经显示 main 和 / (root)，且 Save 按钮为灰色，表示设置已保存，无需再次点击。启用后，符合 GitHub Pages 构建触发条件的推送会启动部署；在 Actions 中查看 pages build and deployment 的结果。部署成功后访问 https://socoo123.github.io/english_speaking_improve/ 。
 
 也可将静态文件交给支持静态网站的平台。ChatGPT 内发布能力以具体产品支持为准。
 
