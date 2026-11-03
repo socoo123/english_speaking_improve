@@ -2,221 +2,411 @@
   {
     "id": "01",
     "number": "01",
-    "title": "把需求问清楚",
-    "englishTitle": "Clarify the requirement",
-    "category": "工作 · 需求讨论",
-    "level": "B1 → B1+",
-    "status": "practice_draft",
-    "summary": "面对一句 “We need an export feature”，先问清用户、范围与完成标准，再讨论实现。",
+    "title": "聊聊你的工作与强项",
+    "englishTitle": "The Interview",
+    "category": "工作 · 团队合作与面试",
+    "level": "B1 起步 · 看完再校准",
+    "status": "available",
+    "summary": "5 分钟美音：跟 Anna 和 Pete 聊工作、合作与面试。先看视频，选简单／适合／困难，再和外教聊自己的项目。",
     "goals": [
-      "用礼貌追问澄清模糊需求",
-      "确认第一版范围并复述共识",
-      "把重点表达用到两个新场景中"
+      "先看一遍 5 分钟视频，记录难易和卡点，不做开课考试",
+      "学会介绍自己的强项、合作方式，以及最自豪的一项工作",
+      "把视频表达用到技术面试和团队讨论，再按反馈调整下一课"
     ],
     "source": {
-      "status": "pending",
+      "status": "verified",
+      "provider": "voa",
       "youtubeId": null,
-      "title": null,
-      "url": null,
-      "transcriptUrl": null,
-      "licenseUrl": null,
-      "licenseSummary": null,
-      "verifiedAt": null,
-      "duration": null,
-      "notes": "视频待选定与许可核实；以下课文为原创练习，不是视频字幕。优先 2—5 分钟、清晰美音、有合法可用字幕的课程。"
+      "title": "Let’s Learn English — Level 2, Lesson 2: The Interview",
+      "url": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-2/3960471.html",
+      "mediaUrl": "https://voa-video-ns.akamaized.net/pangeavideo/2021/02/1/17/1706ec69-afcc-40bb-a79c-4a053b5c77ad_480p.mp4",
+      "transcriptUrl": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-2/3960471.html",
+      "lessonPlanUrl": "https://docs.voanews.eu/en-US-LEARN/2021/05/12/62d48f68-0b39-437e-b2e4-b1c750a8ae30.pdf",
+      "licenseUrl": "https://learningenglish.voanews.com/p/6021.html",
+      "licenseSummary": "来源：VOA Learning English。VOA 独立制作的文字、音频与视频按官网声明属于公有领域；第三方素材除外。本站使用该原创教学课的官网对话，注明来源；中文释义、例句和练习为本站原创。视频由官方服务器提供，不镜像第三方素材。",
+      "verifiedAt": "2026-11-03",
+      "duration": "05:00",
+      "durationSeconds": 300.36,
+      "captions": "画面内置英文字幕（不可关闭）；本次自评请选英文字幕。",
+      "notes": "已获取官方视频并核实媒体时长 300.36 秒、画面英文字幕及官方课程 PDF 的对话内容。课程为 VOA 美式英语教学材料，语速较清楚，实际难度由你的自评和对话校准。YouTube 仍返回 403，未核实对应视频 ID，先使用官方播放器。",
+      "textNote": "以下为 VOA 官网完整对话（含 Professor Bot 讲解），中文为本站释义；官网个别文字与实际口播可能有差异，以音频为准。原网页 “I want you team up” 缺少 to，正文保留原文；正确句型见词汇与句型页。",
+      "transcriptFile": "week-00-the-interview.txt"
     },
     "text": [
       {
-        "speaker": "Alex · Engineer",
-        "en": "Before we discuss the solution, could you clarify who will use this feature?",
-        "zh": "讨论方案之前，可以先明确一下谁会使用这个功能吗？"
+        "speaker": "Anna",
+        "en": "Ms. Weaver is giving new assignments out. I am ready to take on anything she gives me. Well, except reporting traffic from a helicopter. Wish me luck.",
+        "zh": "Weaver 女士正在分配新任务。她交给我什么，我都准备接下来。当然，从直升机上报道路况除外。祝我好运。"
       },
       {
-        "speaker": "Taylor · Product manager",
-        "en": "Our support team needs to export customer reports. Right now, they copy the data by hand.",
-        "zh": "客服团队需要导出客户报表。目前，他们在手动复制数据。"
+        "speaker": "Professor Bot",
+        "en": "I wonder what Anna’s new assignment will be? Professor Bot here! While you are watching, look for phrasal, or two-word verbs. Some stay together, like “go back” and some can come apart, like “give [assignments] out.” Good luck, Anna!",
+        "zh": "我想知道 Anna 的新任务会是什么。我是 Bot 教授！观看时请找找短语动词，也叫双词动词。有些要放在一起，比如 go back；有些可以拆开，比如 give [assignments] out。祝你好运，Anna！"
       },
       {
-        "speaker": "Alex · Engineer",
-        "en": "What problem are we trying to solve? Is the main goal to save time or to reduce errors?",
-        "zh": "我们要解决什么问题？主要目标是节省时间，还是减少错误？"
+        "speaker": "Ms. Weaver",
+        "en": "So, as I said at the meeting last week, I have new assignments for everyone at The Studio. Anna, you're good at asking questions. So, I want you to go back to hosting and reporting.",
+        "zh": "正如我上周开会时所说，我给演播室的每个人都安排了新任务。Anna，你很擅长提问，所以我想让你回去做主持和报道。"
       },
       {
-        "speaker": "Taylor · Product manager",
-        "en": "Both, but saving time is the priority. They need a simple CSV file for their weekly review.",
-        "zh": "两者都有，不过节省时间是优先事项。他们每周复盘需要一个简单的 CSV 文件。"
+        "speaker": "Anna",
+        "en": "That sounds great.",
+        "zh": "听起来很不错。"
       },
       {
-        "speaker": "Alex · Engineer",
-        "en": "Let me make sure I understand. For the first version, we only need a CSV export. We don't need a dashboard yet. Is that right?",
-        "zh": "我确认一下是否理解正确。第一版只需要 CSV 导出，暂时不需要仪表盘，对吗？"
+        "speaker": "Ms. Weaver",
+        "en": "You're also a team player. So, I want you team up with someone ...",
+        "zh": "你也很有团队精神，所以我想让你和某个人搭档……"
       },
       {
-        "speaker": "Taylor · Product manager",
-        "en": "That's right. A dashboard can wait.",
-        "zh": "对，仪表盘可以以后再做。"
+        "speaker": "Anna",
+        "en": "That sounds even better!",
+        "zh": "听起来更好了！"
       },
       {
-        "speaker": "Alex · Engineer",
-        "en": "How will we know it's working as expected? We should agree on the acceptance criteria before we estimate the work.",
-        "zh": "怎样判断它符合预期？估算工作量之前，我们应该先就验收标准达成一致。"
+        "speaker": "Ms. Weaver",
+        "en": "... someone who is very \"different\" from you.",
+        "zh": "……一个与你很“不一样”的人。"
       },
       {
-        "speaker": "Taylor · Product manager",
-        "en": "The file should include the selected date range, and the export should finish within ten seconds.",
-        "zh": "文件应包含所选日期范围内的数据，导出应在十秒内完成。"
+        "speaker": "Anna",
+        "en": "That sounds ... what do you mean \"different\"?",
+        "zh": "听起来……你说“不一样”是什么意思？"
+      },
+      {
+        "speaker": "Ms. Weaver",
+        "en": "Well, you are very cheerful, you're a people person. I want you to team up with someone who ... isn't.",
+        "zh": "你很开朗，很善于与人打交道。我想让你和一个不太这样的人合作。"
+      },
+      {
+        "speaker": "Anna",
+        "en": "Ms. Weaver, I will find that person.",
+        "zh": "Weaver 女士，我会找到那个人的。"
+      },
+      {
+        "speaker": "Mimi",
+        "en": "Excuse me. Are you using this chair?",
+        "zh": "打扰一下，这把椅子你在用吗？"
+      },
+      {
+        "speaker": "Pete",
+        "en": "Yes.",
+        "zh": "是的。"
+      },
+      {
+        "speaker": "Anna",
+        "en": "Pete, hi! Thanks for meeting me.",
+        "zh": "嗨，Pete！谢谢你来见我。"
+      },
+      {
+        "speaker": "Pete",
+        "en": "Sure. But I don’t have lots of time, Anna. I’m busy looking for work.",
+        "zh": "当然。不过我时间不多，Anna。我正忙着找工作。"
+      },
+      {
+        "speaker": "Anna",
+        "en": "Pete, you can tear these want ads up and throw them away! I have good news!",
+        "zh": "Pete，你可以把这些招聘广告撕掉、扔掉了！我有好消息！"
+      },
+      {
+        "speaker": "Pete",
+        "en": "Anna, I was working on that crossword puzzle.",
+        "zh": "Anna，我刚才在做上面的填字游戏。"
+      },
+      {
+        "speaker": "Anna",
+        "en": "Oh. Sorry. Sorry. Pete, forget about the crossword puzzle. I have a job offer for you!",
+        "zh": "哦，对不起，对不起。Pete，先别管填字游戏了。我有个工作机会给你！"
+      },
+      {
+        "speaker": "Pete",
+        "en": "I'm listening.",
+        "zh": "你说，我听着。"
+      },
+      {
+        "speaker": "Anna",
+        "en": "My boss wants me to team up with someone to host a talk show. But the person must be different from me. So, I thought of you.",
+        "zh": "我老板想让我和一个人搭档主持脱口秀。不过，那个人必须和我不一样。所以我想到了你。"
+      },
+      {
+        "speaker": "Pete",
+        "en": "Different from you? What do you mean?",
+        "zh": "和你不一样？什么意思？"
+      },
+      {
+        "speaker": "Anna",
+        "en": "I'm sorry, Pete, I don't have time right now. Here's my boss's address. Your interview is tomorrow morning at 10 am.",
+        "zh": "对不起，Pete，我现在没时间解释。这是我老板的地址。你明天上午十点面试。"
+      },
+      {
+        "speaker": "Pete",
+        "en": "But what do you mean “different”?",
+        "zh": "可是，你说“不一样”是什么意思？"
+      },
+      {
+        "speaker": "Anna",
+        "en": "Just be yourself, Pete. Just be yourself.",
+        "zh": "做你自己就好，Pete。做你自己。"
+      },
+      {
+        "speaker": "Professor Bot",
+        "en": "Did you find any two-word verbs? Here’s one example. Pete can throw the want ads away! Throw away is a two-word verb.",
+        "zh": "你找到了双词动词吗？这里有个例子：Pete 可以把招聘广告扔掉。throw away 是一个双词动词。"
+      },
+      {
+        "speaker": "Ms. Weaver",
+        "en": "Thanks for coming in, Pete.",
+        "zh": "谢谢你过来，Pete。"
+      },
+      {
+        "speaker": "Pete",
+        "en": "Thanks for the opportunity, Ms. Weaver.",
+        "zh": "谢谢您给我这个机会，Weaver 女士。"
+      },
+      {
+        "speaker": "Ms. Weaver",
+        "en": "I need to find out if you have the skills for this job. And I want you to be completely honest.",
+        "zh": "我需要了解你是否具备这份工作所需的技能。我希望你完全坦诚。"
+      },
+      {
+        "speaker": "Pete",
+        "en": "Okay.",
+        "zh": "好的。"
+      },
+      {
+        "speaker": "Ms. Weaver",
+        "en": "First, let's talk about your personal skills. Pete, are you a people person?",
+        "zh": "首先，我们来聊聊你的个人能力。Pete，你善于与人打交道吗？"
+      },
+      {
+        "speaker": "Pete",
+        "en": "Well, okay, sometimes I think people talk too much.",
+        "zh": "嗯，好吧，有时我觉得人们话太多了。"
+      },
+      {
+        "speaker": "Ms. Weaver",
+        "en": "Pete, what work of yours are you most proud of?",
+        "zh": "Pete，你做过的工作中，最令你自豪的是哪一项？"
+      },
+      {
+        "speaker": "Pete",
+        "en": "Last year, I locked myself in a cabin and wrote a book. I didn't speak to anybody the entire time! It was the best two months of my life.",
+        "zh": "去年，我把自己关在小木屋里写了一本书。整个期间我没和任何人说话！那是我人生中最美好的两个月。"
+      },
+      {
+        "speaker": "Ms. Weaver",
+        "en": "Okay. I think I’ve heard enough.",
+        "zh": "好的，我想我已经了解得够多了。"
+      },
+      {
+        "speaker": "Anna",
+        "en": "Hey! Hey, Pete, how was the interview with Ms. Weaver?",
+        "zh": "嘿，Pete！你和 Weaver 女士的面试怎么样？"
+      },
+      {
+        "speaker": "Pete",
+        "en": "Well, she said I was grumpy and not good with people.",
+        "zh": "她说我脾气不太好，而且不擅长和人打交道。"
+      },
+      {
+        "speaker": "Anna",
+        "en": "And … ?",
+        "zh": "然后呢？"
+      },
+      {
+        "speaker": "Pete",
+        "en": "And, I got the job!",
+        "zh": "然后，我得到这份工作了！"
+      },
+      {
+        "speaker": "Anna",
+        "en": "I knew it! Congratulations! Let's go celebrate.",
+        "zh": "我就知道！恭喜你！我们去庆祝吧。"
+      },
+      {
+        "speaker": "Pete",
+        "en": "Okay!",
+        "zh": "好啊！"
+      },
+      {
+        "speaker": "Professor Bot",
+        "en": "Did you find more two-word verbs? Here is the list.",
+        "zh": "你找到更多双词动词了吗？这里是清单。"
       }
     ],
     "vocabulary": [
       {
-        "word": "clarify",
-        "ipa": "/ˈklærəfaɪ/",
-        "meaning": "澄清、说清楚",
-        "example": "Could you clarify what you mean by real-time updates?",
-        "note": "重音在第一音节 CLA；不要把练习目标当作已发现的个人错误。"
+        "word": "take on",
+        "ipa": "/teɪk ɑn/",
+        "meaning": "承担（任务、责任）",
+        "example": "I’m ready to take on the API migration.",
+        "note": "视频原词；工作里常接 a task / responsibility。例句为本站原创。"
       },
       {
-        "word": "requirement",
-        "ipa": "/rɪˈkwaɪɚmənt/",
-        "meaning": "需求、要求",
-        "example": "Let's confirm the requirement before we choose a database.",
-        "note": "重音在第二音节；注意美式 /ɚ/。"
+        "word": "team up with",
+        "ipa": "/tim ʌp wɪð/",
+        "meaning": "与……合作／搭档",
+        "example": "I teamed up with a designer to improve the checkout flow.",
+        "note": "视频原词；team up with someone，后接 to do 说明目标。"
       },
       {
-        "word": "priority",
-        "ipa": "/praɪˈɔrəti/",
-        "meaning": "优先事项",
-        "example": "Reliability is our top priority for this release.",
-        "note": "关注重读音节和非重读元音；不同美音说话者可能有元音差异。"
+        "word": "find out",
+        "ipa": "/faɪnd aʊt/",
+        "meaning": "查明、弄清楚",
+        "example": "We need to find out why the deployment failed.",
+        "note": "视频原词；可接 if / why / what 从句。"
       },
       {
-        "word": "scope",
-        "ipa": "/skoʊp/",
-        "meaning": "范围",
-        "example": "Notifications are outside the scope of this version.",
-        "note": "词尾 /p/ 要保留闭塞，不额外添加元音；不必夸张爆破。"
+        "word": "assignment",
+        "ipa": "/əˈsaɪnmənt/",
+        "meaning": "分配的任务",
+        "example": "My next assignment is to improve our monitoring.",
+        "note": "视频原词；重音在第二音节。"
       },
       {
-        "word": "acceptance criteria",
-        "ipa": "/əkˈsɛptəns kraɪˈtɪriə/",
-        "meaning": "验收标准",
-        "example": "What are the acceptance criteria for this feature?",
-        "note": "criteria 是 criterion 的复数；关注两个词各自的重读音节。"
+        "word": "opportunity",
+        "ipa": "/ˌɑpɚˈtunəti/",
+        "meaning": "机会",
+        "example": "Thanks for the opportunity to discuss my project.",
+        "note": "视频原词；主重音在 TU；先清楚，再练自然弱读。"
       },
       {
-        "word": "trade-off",
-        "ipa": "/ˈtreɪdˌɔf/",
-        "meaning": "取舍、权衡",
-        "example": "There is a trade-off between speed and flexibility.",
-        "note": "用于后续架构讨论；本课为拓展词。"
+        "word": "be proud of",
+        "ipa": "/bi praʊd əv/",
+        "meaning": "为……感到自豪",
+        "example": "I’m proud of reducing our API response time.",
+        "note": "视频原表达；of 后接名词或动名词 reducing。"
+      },
+      {
+        "word": "team player",
+        "ipa": "/ˈtim ˌpleɪɚ/",
+        "meaning": "有团队合作精神的人",
+        "example": "I’m a team player: I share context and ask for feedback.",
+        "note": "视频原词；面试时配具体行为，不只给自己贴标签。"
+      },
+      {
+        "word": "people person",
+        "ipa": "/ˈpipəl ˌpɝsən/",
+        "meaning": "善于与人相处的人",
+        "example": "She’s a people person who makes new teammates feel welcome.",
+        "note": "视频原词；偏日常表达。Pete 的回答是喜剧情节，不是面试示范答案。"
       }
     ],
     "patterns": [
       {
-        "form": "Could you clarify + 疑问词从句?",
-        "explanation": "礼貌地请求澄清。从句采用陈述语序：who will use it / what the goal is。",
-        "example": "Could you clarify what the deadline is?",
-        "contrast": "避免：Could you clarify what is the deadline?"
+        "form": "be good at + 名词 / doing",
+        "explanation": "at 是介词，后接动词时用 -ing。视频里是 good at asking questions。",
+        "example": "I’m good at breaking complex requirements into smaller tasks.",
+        "contrast": "避免：I’m good at to solve problems。"
       },
       {
-        "form": "Let me make sure I understand. + 复述 + Is that right?",
-        "explanation": "先复述理解，再请对方确认，比只说 OK 更能发现偏差。",
-        "example": "Let me make sure I understand. We need a read-only version first. Is that right?"
+        "form": "want + 人 + to do",
+        "explanation": "表达希望某人做某事。视频官网有一句漏写 to，练习时使用完整结构。",
+        "example": "My manager wants me to team up with the platform team."
       },
       {
-        "form": "We should … before we …",
-        "explanation": "用 should 提出建议，用 before 说明先后顺序。",
-        "example": "We should check the risks before we commit to a date."
+        "form": "find out + if / why / what 从句",
+        "explanation": "if 表示“是否”；间接疑问使用陈述语序，便于澄清需求或排查问题。",
+        "example": "We need to find out if the client needs real-time updates.",
+        "contrast": "避免：find out why did the service fail。"
       },
       {
-        "form": "The … should … within …",
-        "explanation": "用 should 描述期望，用 within 给出明确上限；验收文件中可按团队惯例使用 must。",
-        "example": "The page should load within two seconds."
+        "form": "be proud of + 名词 / doing",
+        "explanation": "回答项目经历时先说成果，再解释你的行动和影响。",
+        "example": "I’m proud of improving our release process. I added automated checks, so we caught errors earlier."
+      },
+      {
+        "form": "可拆分短语动词 + 代词",
+        "explanation": "throw away / give out 可以拆分。代词宾语放中间：throw them away；不能把所有短语动词都按这个规则拆开。",
+        "example": "These notes are useful. Please don’t throw them away.",
+        "contrast": "避免：throw away them；team up with 则保持搭配。"
       }
     ],
     "pronunciationTargets": [
-      "clarify / requirement / criteria：检查词重音是否稳定，再放进完整问题中。",
-      "scope、export 等词尾辅音：注意保留词尾，不随意增加元音；是否有问题须听实际音频。",
-      "Could you CLARIFY / who will USE this feature?：按意群说话，突出信息词；大小写仅标示练习重音。",
-      "Let me make sure I understand：练习自然节奏和意群，先清楚，再逐渐连贯。"
+      "opportunity / assignment：检查主重音，避免每个音节用同样力度。",
+      "team up / find out：先保留词尾辅音，再练辅音到元音的自然衔接。",
+      "proud /praʊd/ 与 people /ˈpipəl/：观察元音和词尾，是否需要纠正取决于实际录音。",
+      "I’m GOOD at asking QUESTIONS：按信息重点划分意群；再把 asking questions 换成自己的强项。"
     ],
     "memorize": [
-      "Before we discuss the solution, could you clarify who will use this feature?",
-      "What problem are we trying to solve?",
-      "Let me make sure I understand. … Is that right?",
-      "We should agree on the acceptance criteria before we estimate the work."
+      "I am ready to take on anything she gives me.",
+      "Thanks for the opportunity, Ms. Weaver.",
+      "I need to find out if you have the skills for this job.",
+      "Pete, what work of yours are you most proud of?"
     ],
     "practiceScenarios": [
-      "产品经理提出“给用户加通知”，你需要追问使用者、触发条件与第一版范围。",
-      "同事要求“让页面更快”，你需要问清当前问题、目标指标和验收方法。",
-      "生活迁移：预订酒店时，确认入住时间、早餐是否包含以及取消条件。"
+      "技术面试：用 60—90 秒介绍一个你最自豪的项目，外教追问你的具体贡献和结果。",
+      "团队合作：你要与设计师和平台工程师搭档，说明你擅长什么、愿意承担什么，并问清任务。",
+      "需求讨论：产品经理要实时通知，你用 find out if / why 澄清需求，然后复述共识。",
+      "工作安排：当前任务已满，讨论能接下什么、需要谁协作，不直接承诺一切。",
+      "生活迁移：和朋友分工准备一次旅行，说明你擅长安排什么、愿意负责什么。"
     ],
-    "assessmentFocus": "外教临时生成至少两个与练习不同的需求场景；加入范围变更或时间限制，观察能否追问、复述共识、确认可衡量的验收标准。不先给目标表达。",
+    "assessmentFocus": "先询问难易、英文字幕与倍速条件，请学习者用自己的话解释 Anna 为什么找 Pete、面试结果为何有反差。再自然迁移到自己的技术项目和团队协作，每次只问一个问题。先观察独立回答，卡住后再给提示，区分提示前后表现。Pete 的喜剧回答不作为职业面试范例。不设固定过关分数；下一课初期仍以约 5 分钟为目标，每次只调整一个难度因素。",
     "quiz": [
       {
         "id": "q1",
         "type": "choice",
-        "question": "哪一句适合礼貌地澄清需求？",
+        "question": "为什么 Anna 认为 Pete 适合做搭档？",
         "options": [
-          "Could you clarify what the main goal is?",
-          "Could you clarify what is the main goal?",
-          "You must explain all things now."
+          "他和 Anna 性格不同，符合老板的要求。",
+          "他有最多的主持经验。",
+          "他写过很多招聘广告。"
         ],
         "answer": 0,
-        "explanation": "Could you clarify 后的间接问句使用陈述语序：what the main goal is。"
+        "explanation": "老板希望 Anna 与性格不同的人搭档；不是在找她的复制品。"
       },
       {
         "id": "q2",
         "type": "choice",
-        "question": "对方说“我们要一个更快的系统”，最有帮助的下一步是？",
+        "question": "技术面试被问到最自豪的工作，哪个回答最有帮助？",
         "options": [
-          "立即选一个新的数据库。",
-          "询问现在的响应时间、目标值与关键使用场景。",
-          "回答 OK，然后开始开发。"
+          "I am the best.",
+          "I improved our release process by adding automated checks, which caught errors earlier.",
+          "People talk too much."
         ],
         "answer": 1,
-        "explanation": "先把含糊目标转为可验证需求，再讨论实现。"
+        "explanation": "具体行动和结果比空泛评价更有说服力；这是原创迁移题。"
       },
       {
         "id": "q3",
         "type": "fill",
-        "question": "We should agree ___ the acceptance criteria.",
+        "question": "I’m good ___ asking questions.",
         "answers": [
-          "on"
+          "at"
         ],
-        "explanation": "agree on something：就某件事达成一致。"
+        "explanation": "be good at + doing，表示擅长做某事。"
       },
       {
         "id": "q4",
         "type": "fill",
-        "question": "The export should finish ___ ten seconds.（在十秒以内）",
+        "question": "My boss wants me ___ team up with someone.",
         "answers": [
-          "within"
+          "to"
         ],
-        "explanation": "within + 时间段，表示不超过这个时间范围。"
+        "explanation": "want someone to do something；官网个别句子漏写 to，练习使用完整结构。"
       },
       {
         "id": "q5",
         "type": "fill",
-        "question": "Let me make ___ I understand.",
+        "question": "We need to find ___ if the client needs real-time updates.",
         "answers": [
-          "sure"
+          "out"
         ],
-        "explanation": "make sure：确认。复述共识后可接 Is that right?"
+        "explanation": "find out if …：弄清是否……。"
       },
       {
         "id": "q6",
         "type": "choice",
-        "question": "哪项是更明确的验收标准？",
+        "question": "选择正确的短语动词语序。",
         "options": [
-          "The export should be nice.",
-          "The export should be fast.",
-          "The export should finish within ten seconds."
+          "Throw away them.",
+          "Throw them away.",
+          "Throw they away."
         ],
-        "answer": 2,
-        "explanation": "明确时间上限比 nice 或 fast 更容易验证。"
+        "answer": 1,
+        "explanation": "代词宾语 them 放在可拆分动词 throw 和 away 中间。"
       }
     ],
-    "week": 1
+    "week": 0
   }
 ]

@@ -11,11 +11,23 @@ export function feedbackTemplate(lessonId) {
   };
 }
 
+export function adaptiveFeedbackTemplate(lessonId, learnerFeedback = {}) {
+  const report = feedbackTemplate(lessonId);
+  delete report.learnerReady;
+  delete report.unseenScenarios;
+  return {
+    ...report, schemaVersion: 2,
+    learnerFeedback: { watched: false, difficulty: null, difficulties: [], notes: '', captions: null, playbackRate: null, ...learnerFeedback },
+    recommendation: 'incomplete', adjustmentReason: '', learnerConfirmed: false
+  };
+}
+
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
 const nonempty = value => typeof value === 'string' && value.trim().length > 0;
 const strings = value => Array.isArray(value) && value.every(nonempty);
 
 export function validateReport(report, lessonId) {
+  if (object(report) && report.schemaVersion === 2) return validateAdaptiveReport(report, lessonId);
   const errors = [];
   if (!object(report)) return { valid: false, errors: ['报告必须是 JSON 对象。'], total: null, eligible: false };
   if (report.schemaVersion !== 1) errors.push('schemaVersion 必须为 1。');
@@ -54,6 +66,27 @@ export function validateReport(report, lessonId) {
   const eligible = errors.length === 0 && hasAudio && report.learnerReady && !report.usedHints && report.unseenScenarios >= 2 && complete && total >= 80 && SCORE_KEYS.every(key => report.scores[key] >= 3) && report.scores.task >= 4 && report.scores.pronunciation >= 4 && pronunciationVerified;
   if (report.recommendation === 'pass' && !eligible) errors.push('过关建议与条件不符：需本人确认、真实音频、至少两个新场景、无辅导提示、完整评分达标，以及已稳定的发音复测证据。');
   return { valid: errors.length === 0, errors, total: errors.length ? null : total, eligible: errors.length === 0 && eligible };
+}
+
+function validateAdaptiveReport(report, lessonId) {
+  // Reuse evidence/audio validation, but do not apply the retired examination gate.
+  const result = validateReport({ ...report, schemaVersion: 1, learnerReady: false, unseenScenarios: 0, recommendation: 'practice' }, lessonId);
+  const errors = [...result.errors];
+  const feedback = report.learnerFeedback;
+  if (!object(feedback)) errors.push('缺少 learnerFeedback 视频自评。');
+  else {
+    if (typeof feedback.watched !== 'boolean') errors.push('watched 必须为布尔值。');
+    if (![null, 'easy', 'suitable', 'hard'].includes(feedback.difficulty)) errors.push('difficulty 须为 easy、suitable、hard 或 null。');
+    if (!strings(feedback.difficulties) || typeof feedback.notes !== 'string') errors.push('请填写卡点数组 difficulties 和补充说明 notes。');
+    if (![null, 'none', 'en', 'zh', 'mixed'].includes(feedback.captions)) errors.push('请记录字幕条件 captions。');
+    if (feedback.playbackRate !== null && (typeof feedback.playbackRate !== 'number' || !Number.isFinite(feedback.playbackRate) || feedback.playbackRate <= 0 || feedback.playbackRate > 3)) errors.push('playbackRate 须为有效倍速或 null。');
+    if (!feedback.watched && feedback.difficulty !== null) errors.push('尚未观看视频时，不填写视频难度评价。');
+  }
+  if (typeof report.learnerConfirmed !== 'boolean') errors.push('learnerConfirmed 须为布尔值。');
+  if (typeof report.adjustmentReason !== 'string') errors.push('请填写 adjustmentReason 调整依据。');
+  if (!['easier', 'same', 'harder', 'revisit', 'incomplete'].includes(report.recommendation)) errors.push('recommendation 须为 easier、same、harder、revisit 或 incomplete。');
+  if (report.recommendation !== 'incomplete' && (!feedback?.watched || !feedback?.difficulty || !nonempty(report.adjustmentReason) || !SCORE_KEYS.some(key => nonempty(report.evidence?.[key])))) errors.push('调整建议需要已观看视频、自评、真实对话证据和调整理由。');
+  return { valid: errors.length === 0, errors, total: errors.length ? null : result.total, eligible: false };
 }
 
 export function parseReport(text, lessonId) {

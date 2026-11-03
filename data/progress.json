@@ -2,12 +2,14 @@
   "schemaVersion": 1,
   "updatedAt": null,
   "learner": {
-    "startingLevel": "B1（自评，待诊断）",
+    "startingLevel": "约 B1（自评，通过视频与持续对话逐步校准）",
     "target": "熟悉工作场景中的 B2 沟通能力",
     "weeks": 26,
     "hoursPerWeek": 10,
     "workPercent": 80,
-    "accent": "General American"
+    "accent": "General American",
+    "startDate": "2026-11-02",
+    "weekStartsOn": "Monday"
   },
   "records": [
     {
@@ -17,7 +19,7 @@
       "reviewedAt": null,
       "scores": null,
       "total": null,
-      "summary": "尚未收到外教测评报告；无正式成绩。",
+      "summary": "第 0 周（2026-11-02—11-08）：已备好 5 分钟美音视频 The Interview，等待你的自评和外教对话反馈；尚无评分。",
       "history": []
     }
   ]

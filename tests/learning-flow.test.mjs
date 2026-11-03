@@ -84,14 +84,14 @@ test('a copied JSON code fence is accepted without accepting surrounding prose',
 
 test('quiz distinguishes skipped, incorrect and correct answers, with normalized fill-in input', async () => {
   const [lesson] = JSON.parse(await readFile(new URL('../data/lessons.json', import.meta.url)));
-  const results = gradeQuiz(lesson.quiz, { q1: '0', q2: '0', q3: ' ON ', q4: 'within', q5: '', q6: '2' });
+  const results = gradeQuiz(lesson.quiz, { q1: '0', q2: '0', q3: ' AT ', q4: 'to', q5: '', q6: '1' });
   assert.equal(results.filter(result => result.correct).length, 4);
   assert.equal(results.find(result => result.id === 'q2').answered, true);
   assert.equal(results.find(result => result.id === 'q5').answered, false);
   assert.equal(gradeQuiz(lesson.quiz, {}).some(result => result.correct), false);
 });
 
-test('current course preserves pending source and genuinely unassessed official results', async () => {
+test('course sources remain explicit and official results remain genuinely unassessed', async () => {
   const lessons = JSON.parse(await readFile(new URL('../data/lessons.json', import.meta.url)));
   const progress = JSON.parse(await readFile(new URL('../data/progress.json', import.meta.url)));
   const ids = new Set(lessons.map(lesson => lesson.id));

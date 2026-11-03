@@ -209,3 +209,7 @@ details > p { font-size: 12px; margin-top: 14px; }
   .site-footer { font-size: 9px; padding-top: 20px; }
 }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+
+.rating-options, .difficulty-options { display: flex; flex-wrap: wrap; gap: 10px; }
+.rating-options .option, .difficulty-options .option { margin: 0; }
+.short-box { min-height: 110px; }
