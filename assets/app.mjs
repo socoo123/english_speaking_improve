@@ -69,7 +69,7 @@ function quizMarkup() {
 
 function selfReviewMarkup() {
   const difficulties = ['语速与连读', '生词与搭配', '句子与语法', '听懂但说不出', '发音与重音', '背景知识'];
-  return `<section class="content-section"><h3>看完后，你觉得怎么样？</h3><p class="muted">先正常看一遍，记录字幕和倍速。卡在哪里比答对几题更有用；卡点可以多选，也可以补充具体时间点和句子。</p>
+  return `<section class="content-section" id="self-review"><h3>看完后，你觉得怎么样？</h3><p class="muted">先正常看一遍，记录字幕和倍速。卡在哪里比答对几题更有用；卡点可以多选，也可以补充具体时间点和句子。</p>
     <form id="self-review-form"><label class="check-label"><input name="watched" type="checkbox" ${selfReview.watched ? 'checked' : ''} ${lesson.source.status !== 'verified' ? 'disabled' : ''}><span>我已经看过本课视频<small class="muted">看完后再记录感受，不要求一次全听懂。</small></span></label>
     <fieldset class="quiz-question"><legend>整体感受</legend><div class="rating-options">${[['easy','简单'],['suitable','适合'],['hard','困难']].map(([value, label]) => `<label class="option"><input type="radio" name="difficulty" value="${value}" ${selfReview.difficulty === value ? 'checked' : ''} ${!selfReview.watched ? 'disabled' : ''}><span>${label}</span></label>`).join('')}</div></fieldset>
     <fieldset class="quiz-question"><legend>难在哪里？（可选；没有卡点可以不选）</legend><div class="difficulty-options">${difficulties.map(label => `<label class="option"><input type="checkbox" name="difficulties" value="${escape(label)}" ${Array.isArray(selfReview.difficulties) && selfReview.difficulties.includes(label) ? 'checked' : ''}><span>${escape(label)}</span></label>`).join('')}</div></fieldset>
@@ -81,8 +81,9 @@ function selfReviewMarkup() {
 
 function lessonView() {
   return `<section class="content-section"><div class="section-title"><h3>本周目标</h3><span class="muted small-text">${escape(lesson.level)}</span></div><ul class="goals">${lesson.goals.map(goal => `<li>${escape(goal)}</li>`).join('')}</ul></section>
-    <section class="content-section" id="video">${videoSection()}</section>${selfReviewMarkup()}
-    <details id="text"><summary>展开本课英文课文与中文释义</summary><section class="content-section"><div class="status-row"><h3>本课课文 <span class="heading-en">${escape(lesson.englishTitle)}</span></h3><button class="button secondary small" id="toggle-translation" aria-pressed="false">隐藏中文</button></div><p class="muted small-text">${escape(lesson.source.textNote || "本站原创练习，非视频逐字稿。")}</p>${/^[a-z0-9-]+\.txt$/.test(lesson.source.transcriptFile) ? `<p class="small-text"><a href="./data/transcripts/${escape(lesson.source.transcriptFile)}" download>下载英文课文 TXT ↓</a></p>` : ''}<p class="muted small-text">先理解，再挑核心表达背诵，最后脱稿复述。整段背诵可以分几次完成。</p><ol class="transcript">${lesson.text.map(line => `<li><span class="speaker">${escape(line.speaker)}</span><p class="english" lang="en">${escape(line.en)}</p><p class="translation">${escape(line.zh)}</p></li>`).join('')}</ol></section></details>
+    <section class="content-section" id="video">${videoSection()}<div class="actions"><a class="button secondary" href="#lesson/text">阅读本课课文 ↓</a><a class="inline-link" href="#lesson/self-review">填写观看感受 ↓</a></div></section>
+    <section class="content-section" id="text" aria-labelledby="text-title"><div class="status-row"><h3 id="text-title">本课英文原文与中文释义 <span class="heading-en">${escape(lesson.englishTitle)}</span></h3><button class="button secondary small" id="toggle-translation" aria-pressed="false">隐藏中文</button></div><p class="muted small-text">${escape(lesson.source.textNote || "本站原创练习，非视频逐字稿。")}</p>${/^[a-z0-9-]+\.txt$/.test(lesson.source.transcriptFile) ? `<p class="small-text"><a href="./data/transcripts/${escape(lesson.source.transcriptFile)}" download>下载英文课文 TXT ↓</a></p>` : ''}<p class="muted small-text">先理解，再挑核心表达背诵，最后脱稿复述。整段背诵可以分几次完成。</p><ol class="transcript">${lesson.text.map(line => `<li><span class="speaker">${escape(line.speaker)}</span><p class="english" lang="en">${escape(line.en)}</p><p class="translation">${escape(line.zh)}</p></li>`).join('')}</ol></section>
+    ${selfReviewMarkup()}
     <div class="actions"><a class="button" href="#language">接着练词汇与句型 →</a></div>`;
 }
 
@@ -129,7 +130,7 @@ ${JSON.stringify(feedbackTemplate(lesson.id, selfReview), null, 2)}
 }
 
 function tutorView() {
-  return `<section class="content-section"><h3>看完视频，和外教聊一聊</h3><p class="muted">先在「视频与自评」记录简单／适合／困难及卡点，再复制下面的指令到 GPT 语音会话。外教会聊视频内容、让你复述并换个场景使用表达，逐步了解你的水平。</p><p class="notice">不另设开课测试，也不要求达到固定分数才调整课程。先交流，再纠正；下一课根据你的感受和实际表现共同决定。</p>
+  return `<section class="content-section"><h3>看完视频，和外教聊一聊</h3><p class="muted">先在「视频与课文」记录简单／适合／困难及卡点，再复制下面的指令到 GPT 语音会话。外教会聊视频内容、让你复述并换个场景使用表达，逐步了解你的水平。</p><p class="notice">不另设开课测试，也不要求达到固定分数才调整课程。先交流，再纠正；下一课根据你的感受和实际表现共同决定。</p>
     <label class="form-label" for="tutor-prompt">本周专属外教指令（包含当前视频自评）</label><textarea id="tutor-prompt" class="prompt-box" readonly>${escape(tutorPrompt())}</textarea><div class="actions"><button class="button" id="copy-tutor">复制本课指令 ↗</button><a href="#progress" class="button secondary">带回外教反馈</a></div><p class="muted small-text">只有真正分析了原始音频，才能评价发音和口语流畅度。外教指令包含课文，仍不能声称已观看或听过视频。</p></section>
     <section class="content-section"><h3>可选场景热身</h3>${list(lesson.practiceScenarios)}<details><summary>本周反馈模板</summary><textarea id="feedback-template" class="prompt-box" aria-label="本课 JSON 反馈模板" readonly>${escape(JSON.stringify(feedbackTemplate(lesson.id, selfReview), null, 2))}</textarea><div class="actions"><button id="copy-template" class="button secondary">复制空白模板</button></div></details></section>`;
 }
