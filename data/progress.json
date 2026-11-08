@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": null,
+  "updatedAt": "2026-11-08",
   "learner": {
     "startingLevel": "约 B1（自评，通过视频与持续对话逐步校准）",
     "target": "熟悉工作场景中的 B2 沟通能力",
@@ -9,17 +9,67 @@
     "workPercent": 80,
     "accent": "General American",
     "startDate": "2026-11-02",
-    "weekStartsOn": "Monday"
+    "weekStartsOn": "Monday",
+    "practicePreferences": {
+      "updatedAt": "2026-11-08",
+      "nextWeekMinimumHours": 7,
+      "dailyMinimumMinutes": 60,
+      "priority": "用已有词汇独立讲清楚，逐步扩大表达范围；先完成意思，再纠正与重说。",
+      "difficultyAdjustment": "小幅提升：约 5 分钟、正常速度，首遍只听声音；根据无文字支持时的理解和独立表达再考虑自然快语速。"
+    }
   },
   "records": [
     {
       "lessonId": "01",
+      "status": "completed",
+      "assessedAt": "2026-11-08",
+      "reviewedAt": "2026-11-08",
+      "learnerConfirmed": true,
+      "confirmedAt": "2026-11-08",
+      "mode": "text",
+      "audioEvidence": false,
+      "usedHints": true,
+      "scores": { "task": 4, "interaction": 4, "language": 3, "fluency": null, "pronunciation": null },
+      "scoreSource": "学习者提供的 GPT 外教文字报告；原分保留，复核者未独立听取音频或查看完整对话。报告含提示依赖，4 分不代表已核实稳定独立输出。",
+      "total": null,
+      "summary": "第 0 周已复核并经本人确认完成。依据外教文字报告：能理解人物动机、回应追问并描述有量化结果的技术经历，组织答案仍需部分提示；原报告任务 4、互动 4、语言 3，非独立音频测评。本人补充视频偏简单、本周投入约 1 小时，表达时有卡顿感；下周每天至少 1 小时，优先练用熟词讲清楚。下一课保持约 5 分钟与原速，首遍只听声音，继续练问题—行动—结果、主谓一致与自然搭配。发音与口语流畅度未评估。",
+      "recommendation": "harder",
+      "nextLessonId": "02",
+      "pronunciationNotes": [],
+      "nextPractice": [
+        "先独立用三句话讲问题、行动、结果；卡住时先换简单说法，提示后再脱稿重说。",
+        "复习第三人称单数 wants、a people person、reduce build time；换一个项目再次使用。",
+        "从叙述成果扩展到解释经过、原因、不同看法与下一步；不预先给整段示范。",
+        "正常速度首遍只听声音；再看带英文字幕的视频核对，分别记录两遍的理解。"
+      ],
+      "history": [
+        {
+          "assessedAt": "2026-11-08",
+          "reviewedAt": "2026-11-08",
+          "source": "learner_supplied_tutor_report",
+          "mode": "text",
+          "audioEvidence": false,
+          "usedHints": true,
+          "learnerConfirmed": false,
+          "scores": { "task": 4, "interaction": 4, "language": 3, "fluency": null, "pronunciation": null },
+          "summary": "首次外教文字报告：理解与互动较顺利，能够联系技术经历，但部分组织表达和改错依赖示范；自评 suitable、英文字幕、1 倍速，建议略微加难。只有报告依据，未独立核听。"
+        },
+        {
+          "assessedAt": "2026-11-08",
+          "source": "learner_followup_and_completion_confirmation",
+          "learnerConfirmed": true,
+          "summary": "本人补充视频偏简单、表达有卡顿感，本周约学习 1 小时；希望下周每天至少 1 小时，以现有词汇练独立表达。随后明确确认第 0 周完成并进入下一课；卡顿为自述，不转换为流畅度评分。"
+        }
+      ]
+    },
+    {
+      "lessonId": "02",
       "status": "not_assessed",
       "assessedAt": null,
       "reviewedAt": null,
       "scores": null,
       "total": null,
-      "summary": "第 0 周（2026-11-02—11-08）：已备好 5 分钟美音视频 The Interview，等待你的自评和外教对话反馈；尚无评分。",
+      "summary": "第 1 周（2026-11-09—11-15）：根据首次反馈准备 He Said – She Said。首遍只听声音，再看英文字幕核对；重点把事情经过、原因、行动和结果讲清楚。等待实际自评与对话反馈。",
       "history": []
     }
   ]

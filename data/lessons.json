@@ -408,5 +408,165 @@
       }
     ],
     "week": 0
+  },
+  {
+    "id": "02",
+    "number": "02",
+    "week": 1,
+    "title": "用简单英语把事情讲清楚",
+    "englishTitle": "He Said – She Said",
+    "category": "工作 · 说明经过、原因与结果",
+    "level": "B1 · 首遍纯听，表达优先",
+    "status": "available",
+    "summary": "5 分钟美音，首遍只听声音，再看英文字幕核对。每天至少 1 小时，重点练用熟悉的词讲项目、解释问题、回应追问。",
+    "goals": [
+      "正常速度首遍只听声音，不先读课文；说出双方对迟到的解释，再开视频核对",
+      "用问题—行动—结果三句短句讲清一件事；忘词时换简单说法，先把意思说完",
+      "从项目成果扩展到说明延期、澄清不同看法和提出下一步；提示后脱稿重说，再换场景"
+    ],
+    "source": {
+      "status": "verified",
+      "provider": "voa",
+      "youtubeId": null,
+      "title": "Let’s Learn English — Level 2, Lesson 3: He Said - She Said",
+      "url": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-3/4027340.html",
+      "mediaUrl": "https://voa-video-ns.akamaized.net/pangeavideo/2021/02/e/ee/ee3e6fb5-9ea6-4f8b-88b4-c24e14fb2780_240p.mp4?cb=edc3e7884",
+      "transcriptUrl": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-3/4027340.html",
+      "lessonPlanUrl": "https://docs.voanews.eu/en-US-LEARN/2021/05/12/e0b2588c-bbe4-4a4e-ad46-79a95f277b63.pdf",
+      "licenseUrl": "https://learningenglish.voanews.com/p/6021.html",
+      "licenseSummary": "来源：VOA Learning English，He Said - She Said。VOA 使用声明将其独立制作的文字、音频与视频列为公有领域，第三方素材除外。本页署名节选官方教学对话；中文释义、例句、训练计划与练习为本站原创。媒体从官方服务器播放，不镜像素材。",
+      "verifiedAt": "2026-11-08",
+      "duration": "05:00",
+      "durationSeconds": 300.4,
+      "listeningFirst": true,
+      "captions": "视频画面内置英文字幕，不可关闭。默认只播放同一视频的声音；打开画面后会看到英文字幕。自评备注请分别写首遍纯听与后续字幕核对的感受，看过字幕后选英文字幕或混合使用。",
+      "notes": "官方课程页与媒体页均标 5 分钟。已下载此 240p 文件（HTTP 200），FFmpeg 读取时长 300.40 秒，抽查画面确认内置英文字幕。只听声音不等于获得无字幕版视频；本课不加倍速。YouTube ID 未核实。PDF 链接由官网提供，不宣称逐句校对 PDF。",
+      "textNote": "以下为 VOA 官网对话节选，按原顺序保留；省略 Professor Bot 语法讲解及部分台词，不是完整逐字稿，也没有逐秒时间轴。完整英文见官方课程页。中文为本站释义；配套工作例句为原创，不是视频内容。",
+      "transcriptFile": "week-01-he-said-she-said-excerpts.txt"
+    },
+    "text": [
+      {
+        "speaker": "Anna",
+        "en": "Today, Pete and I are meeting with a consultant who will help us with our new show. Yesterday, Pete had promised to meet me here at 8:00 am. but he did not come on time.",
+        "zh": "今天 Pete 和我要见一位帮助我们筹备新节目的顾问。昨天他答应早上八点在这里见我，但没有准时到。"
+      },
+      {
+        "speaker": "Kelly",
+        "en": "You two are late -- exactly 43 minutes late! What happened?",
+        "zh": "你们俩迟到了，整整迟到四十三分钟！发生什么事了？"
+      },
+      {
+        "speaker": "Anna",
+        "en": "He had to get his \"special\" coffee -- SPECIAL coffee!",
+        "zh": "他非要买他的“特别”咖啡！"
+      },
+      {
+        "speaker": "Pete",
+        "en": "She had to feed her birds -- HER birds!",
+        "zh": "她非要去喂她的鸟！"
+      },
+      {
+        "speaker": "Kelly",
+        "en": "Okay, I can see already that you need my help. You can’t both talk at the same time. You have to take turns. Alright, Anna, you go first.",
+        "zh": "好，我已经看出你们需要我的帮助了。你们不能同时说，要轮流说。Anna，你先来。"
+      },
+      {
+        "speaker": "Anna",
+        "en": "Sure. Kelly, see, Pete and I live in the same building. So, we decided to meet at 8:00 a.m. - 8:00 a.m. to come to work together. I had waited 15 minutes when Pete arrived!",
+        "zh": "好。Kelly，Pete 和我住在同一栋楼，所以约好八点见，一起上班。他到的时候，我已经等了十五分钟！"
+      },
+      {
+        "speaker": "Anna",
+        "en": "After Pete had wasted time waiting for coffee, we were late. I left you a message.",
+        "zh": "Pete 等咖啡耽误了时间，之后我们就迟到了。我给你留了言。"
+      },
+      {
+        "speaker": "Kelly",
+        "en": "Hum. I didn’t get that message.",
+        "zh": "嗯，我没有收到那条留言。"
+      },
+      {
+        "speaker": "Pete",
+        "en": "Yeah, that’s not why we’re late. This is why we’re late: I had arrived on time at 8:00 a.m. but didn’t see Anna. She was standing behind a tree. I think she was hugging it. I always walk to work. But she said that would take too long and that a scooter would be much faster. It was awful. I hated it. And it added too much time to our commute!",
+        "zh": "那不是我们迟到的原因。我八点准时到了，但没看到 Anna。她站在树后面，我觉得她在抱树。我平时走路上班，但她说太慢了，滑板车会快很多。体验糟透了，而且让通勤花了更多时间！"
+      },
+      {
+        "speaker": "Pete",
+        "en": "Then Anna stopped by a pond to feed the birds. She had named them after characters from books and yelled the names out loud … Romeo! Juliet! Sherlock!",
+        "zh": "然后 Anna 在池塘边停下喂鸟。她用书里的人物给鸟起名，还大声喊它们：罗密欧、朱丽叶、夏洛克！"
+      },
+      {
+        "speaker": "Pete",
+        "en": "By the time she had fed all the birds, we were late.",
+        "zh": "等她喂完所有的鸟，我们已经迟到了。"
+      },
+      {
+        "speaker": "Kelly",
+        "en": "This is what I think. You two see the same event very differently. Does this happen often with you two?",
+        "zh": "我是这样看的：你们对同一件事的看法很不一样。你们经常这样吗？"
+      },
+      {
+        "speaker": "Kelly",
+        "en": "Okay. This is good. This is good! It’s good to see things differently. I have an idea: we will call the show \"He Said, She Said.\" For every story, you tell a different point of view.",
+        "zh": "这也很好！从不同角度看事情有好处。我有个主意：节目就叫“他说，她说”。每个故事，你们各自讲出不同的观点。"
+      },
+      {
+        "speaker": "Anna",
+        "en": "That is a great idea, Kelly! Pete, we are different. That’s why I thought of you for this job!",
+        "zh": "好主意，Kelly！Pete，我们确实不同，所以我才想到让你来做这份工作！"
+      }
+    ],
+    "vocabulary": [
+      { "word": "take turns", "ipa": "/teɪk tɝnz/", "meaning": "轮流", "example": "Let's take turns explaining what happened.", "note": "视频表达；先听对方讲完，再补充自己的观察。例句为原创。" },
+      { "word": "on time", "ipa": "/ɑn taɪm/", "meaning": "准时", "example": "We finished the task on time.", "note": "视频表达；用熟悉的 finish / start 配合它即可。" },
+      { "word": "point of view", "ipa": "/pɔɪnt əv vju/", "meaning": "观点；看事情的角度", "example": "From my point of view, we need more time to test it.", "note": "视频表达；想不起来可以说 I think，不必停下找高级表达。" },
+      { "word": "leave a message", "ipa": "/liv ə ˈmɛsɪdʒ/", "meaning": "留言", "example": "I left a message to explain the delay.", "note": "视频表达；leave 的过去式是 left，解释后确认对方收到。" },
+      { "word": "reduce build time", "ipa": "/rɪˈdus bɪld taɪm/", "meaning": "减少构建耗时", "example": "We reduced build time by removing an unnecessary step.", "note": "上课待练搭配；原创例句，不是视频台词，也不代表你的真实项目事实。" },
+      { "word": "let me put it another way", "ipa": "/lɛt mi pʊt ɪt əˈnʌðɚ weɪ/", "meaning": "让我换个说法", "example": "Let me put it another way. We spend less time waiting now.", "note": "原创表达工具；忘词时换成更简单的解释，不必从头重来。" }
+    ],
+    "patterns": [
+      { "form": "问题 → 行动 → 结果", "explanation": "先用三句短句交代事实，再按追问补细节。例句是虚构教学场景；自己的数字与行动由你提供。", "example": "The build was slow. I removed an unnecessary step. Now the team waits less." },
+      { "form": "First … Then … In the end …", "explanation": "用熟悉的连接词交代顺序。时间关系清楚时用一般过去时即可，本周不强制使用过去完成时。", "example": "First, I checked the logs. Then I changed one setting. In the end, the service worked again." },
+      { "form": "I think … because … / For example, …", "explanation": "表达观点时补一个理由，再用具体例子支持；避免只说 good / bad。", "example": "I think we need more time because one test still fails." },
+      { "form": "The problem was … / What I mean is …", "explanation": "想不起术语时解释现象、用途或影响。先把主干讲完，再补充，不必把中文长句逐字翻译。", "example": "The problem was that people had to wait. What I mean is, they could not test their changes quickly." },
+      { "form": "复习：主语 + wants；a people person", "explanation": "单数第三人称在一般现在时用 wants；people person 是可数单数搭配，要有 a。先独立回答，纠正后换个人再说一次。", "example": "My manager wants a clearer update. She is a people person.", "contrast": "避免：My manager want；She is very people person。" },
+      { "form": "识别即可：had + 过去分词", "explanation": "视频讲过去完成时：相对于另一个过去时刻，某件事已经发生。先听懂先后，不必为套时态而阻塞表达。", "example": "The meeting had started when I arrived." }
+    ],
+    "pronunciationTargets": [
+      "wants /wɑnts/、build /bɪld/：在真实音频中检查词尾是否清楚；目前没有已核实的个人发音错误。",
+      "First … / Then … / In the end …：按意思分组，允许自然停顿，不要求赶速度。",
+      "reduce /rɪˈdus/、result /rɪˈzʌlt/：观察主重音；若有实际问题，每轮选 1—3 个点并用新句复测。"
+    ],
+    "memorize": [
+      "The problem was … I … As a result, …",
+      "First, … Then, … In the end, …",
+      "I think … because …",
+      "Let me put it another way. …"
+    ],
+    "practiceScenarios": [
+      "技术面试：独立用三句讲一次真实、脱敏的项目改进。外教先问具体做了什么，再问结果如何得知；不替你编行动或数字。",
+      "项目同步：一次任务没有准时结束。说明发生了什么、为什么、接下来怎么做；外教追问什么时候能再给更新。",
+      "团队协作：同事认为是需求变了，你认为是测试花了更多时间。先复述对方观点，再说自己观察到的事实，讨论如何核实。",
+      "非技术沟通：向不懂构建流程的同事解释为什么这项改进有用。忘掉术语，用等待时间、工作步骤和影响来说明。",
+      "生活迁移：去见朋友的路上迟到了。说明经过、道歉并提出新的见面安排；换一个原因，不重复工作答案。"
+    ],
+    "studyPlan": [
+      "每天 60 分钟：听力与核对 15 分钟；脱稿表达 15 分钟；外教追问、纠正与重说 25 分钟；复盘 5 分钟。开口练习可以拆成两段，额外时间再补听读。",
+      "第 1 天：首遍只听声音，正常速度，不提前读课文。用自己的话说双方迟到的理由；再看英文字幕核对。在备注分别写纯听与核对后的感受。",
+      "第 2 天：分别从 Anna、Pete 的角度讲经过，用 first / then / because 即可。把不确定的地方说成 Anna says / Pete says，不把一方说法当作已证实事实。",
+      "第 3 天：复习第一课项目成果：三句讲问题、行动、结果。只记关键词，不写整篇稿；外教纠正后合上提示再说。",
+      "第 4 天：练任务延期更新。说明原因、当前行动与下一步；外教改变一个条件，再让你回答，观察能否迁移。",
+      "第 5 天：讨论不同观点。先说明对方担心什么，再说你的理由；练两个工作场景后，加一个旅行或见朋友的生活场景。",
+      "第 6 天：向非技术听众重讲项目，再回答一条未提前准备的追问。忘词时练解释用途或影响，不强迫用新词。",
+      "第 7 天：不看范文重讲一件事，比较需要多少提示、原因和结果是否更清楚；外教写反馈。只有实际听取原始音频时才评口语流畅度和发音，本人确认后再复核周进度。"
+    ],
+    "assessmentFocus": "本课 lessonId=02，第 1 周。上课依据是 GPT 文字报告：任务 4、互动 4、语言 3，给过提示；发音与口语流畅度未评估，不当成已核实独立口语水平。本人说原视频偏简单、表达会卡住，想用现有词汇说清楚，下周每天至少 1 小时。先核实本课是否首遍只听声音（没有画面），还是直接看了内置英文字幕；若随后看字幕，learnerFeedback.captions 填 en 或 mixed，并在 notes 区分两遍条件、难度与卡点，不能称视频字幕可关闭。保持 1 倍速，主要只减少首遍文字支持，不增加计时或复杂语法要求。先请他解释 Anna 和 Pete 各自说了什么；不提前给答案。以每次一个问题迁移到项目成果、延期说明和不同观点。先三句短句，卡住先鼓励换简单词，必要时按关键词—句子开头—单句示范逐级提示。答完再纠正 1—2 处，要求脱稿重说；随后换细节或场景。追问行动与结果时不替他编事实。回顾 wants、a people person、reduce build time；过去完成时只需识别，不强制输出。报告分别写首次独立表达、具体提示、提示后表现与新场景表现；清楚表达优先于生词和长句。若纯听仍轻松且独立表达有进步，再讨论后续更快自然语速；若听懂但说不清，保留听力水平并增加组织表达练习。",
+    "quiz": [
+      { "id": "q1", "type": "choice", "question": "Anna 和 Pete 对迟到的解释，应该怎样概括？", "options": ["两人提供不同说法，需要区分各自观点与已核实事实。", "已经证明只有 Pete 说的是真的。", "两人的说法完全相同。"], "answer": 0, "explanation": "练习分别转述，不把一个人的解释自动当作事实。题目为本站原创。" },
+      { "id": "q2", "type": "choice", "question": "想不起技术术语时，哪个做法有助于继续交流？", "options": ["停下来，直到找到高级词。", "解释用途或影响：Now the team spends less time waiting.", "让外教替你讲完整个项目。"], "answer": 1, "explanation": "用已有词汇说清意思；随后再补需要的术语。" },
+      { "id": "q3", "type": "fill", "question": "My manager ___ me to explain the result.（want 的正确形式）", "answers": ["wants"], "explanation": "manager 是单数第三人称，一般现在时用 wants。" },
+      { "id": "q4", "type": "fill", "question": "She is ___ people person.", "answers": ["a"], "explanation": "a people person：一个善于与人打交道的人。" },
+      { "id": "q5", "type": "choice", "question": "哪组短句把问题、行动、结果讲得最清楚？（虚构场景）", "options": ["The build was slow. I am great. It was good.", "The build was slow. I removed an unnecessary step. Now we spend less time waiting.", "I worked on a project. It was a project. I like it."], "answer": 1, "explanation": "三句可以完成清楚的表达，不需要复杂词汇。自己的项目事实应自行提供。" }
+    ]
   }
 ]
