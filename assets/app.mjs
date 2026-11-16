@@ -60,8 +60,8 @@ function videoSection() {
     player = `<video class="video-frame" controls preload="${source.listeningFirst ? 'none' : 'metadata'}" playsinline aria-label="${escape(source.title)}" ${source.listeningFirst ? 'id="lesson-video" hidden' : ''}><source src="${escape(safeUrl(source.mediaUrl))}" type="video/mp4">浏览器不支持视频，请使用下面的官方视频链接。</video>`;
     if (source.listeningFirst) player = `<p class="notice">首遍只听声音，先不读课文。听完说说发生了什么，再显示视频核对英文字幕。保持正常速度。</p><audio id="listening-audio" controls preload="metadata" aria-label="${escape(source.title)} · 首遍只听声音"><source src="${escape(safeUrl(source.mediaUrl))}" type="video/mp4">浏览器不支持纯音频播放，请打开视频并移开视线。</audio><div class="actions"><button id="toggle-video" class="button secondary" aria-expanded="false" aria-controls="lesson-video">显示视频（含英文字幕）</button></div>${player}`;
   }
-  if (player) return `<h3>${escape(source.title)} <span class="heading-en">${escape(source.duration)}</span></h3>${player}<p id="video-help" class="small-text muted">${escape(source.captions || '字幕以播放器可用选项为准。')} 播放不了时，可打开官方课程页或直接视频。</p><p class="small-text"><a href="${escape(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">官方课程与课文 ↗</a>${safeUrl(source.mediaUrl) ? ` · <a href="${escape(safeUrl(source.mediaUrl))}" target="_blank" rel="noopener noreferrer">直接打开视频 ↗</a>` : ''}${safeUrl(source.lessonPlanUrl) ? ` · <a href="${escape(safeUrl(source.lessonPlanUrl))}" target="_blank" rel="noopener noreferrer">官方课程 PDF ↗</a>` : ''}</p><details><summary>来源与使用说明</summary><p class="small-text muted">${escape(source.licenseSummary)} · 核实日期：${escape(source.verifiedAt)}</p><a href="${escape(safeUrl(source.licenseUrl))}" target="_blank" rel="noopener noreferrer">查看来源许可 ↗</a></details>`;
-  return `<div class="video-placeholder"><span class="play" aria-hidden="true">▷</span><h3>为本章挑一段合适的美音视频</h3><p>${escape(source.notes)}</p><span class="badge neutral">待核实来源 · 暂无视频</span></div>`;
+  if (player) return `${player}<div class="video-heading"><div><span class="media-label">本课视频</span><h3>${escape(source.title)}</h3></div><span class="duration">${escape(source.duration)}</span></div><p class="source-fallback"><a href="${escape(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">在来源网站观看<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a><span class="muted">播放不了时使用</span></p><details class="source-details"><summary>字幕、来源与版权说明</summary><p id="video-help" class="small-text muted">${escape(source.captions || '字幕以播放器可用选项为准。')}</p><p>${escape(source.provider || source.title)}；核实日期：${escape(source.verifiedAt)}</p><p>${escape(source.licenseSummary)}</p><div class="source-links">${safeUrl(source.mediaUrl) ? `<a href="${escape(safeUrl(source.mediaUrl))}" target="_blank" rel="noopener noreferrer">直接打开视频</a>` : ''}${safeUrl(source.lessonPlanUrl) ? `<a href="${escape(safeUrl(source.lessonPlanUrl))}" target="_blank" rel="noopener noreferrer">官方课程 PDF</a>` : ''}<a href="${escape(safeUrl(source.licenseUrl))}" target="_blank" rel="noopener noreferrer">查看来源许可</a></div></details>`;
+  return `<div class="video-placeholder"><h3>视频来源待核实</h3><p>${escape(source.notes)}</p><span class="badge neutral">暂不提供播放器</span></div>`;
 }
 
 function quizMarkup() {
@@ -77,26 +77,40 @@ function selfReviewMarkup() {
     <label class="form-label" for="captions">观看时用的字幕</label><select id="captions" name="captions">${[['','未记录'],['none','无字幕'],['en','英文字幕'],['zh','中文字幕'],['mixed','混合使用']].map(([value,label]) => `<option value="${value}" ${selfReview.captions === value ? 'selected' : ''}>${label}</option>`).join('')}</select>
     <label class="form-label" for="playback-rate">播放倍速</label><select id="playback-rate" name="playbackRate">${[['','未记录'],['0.75','0.75 倍'],['1','正常速度'],['1.25','1.25 倍'],['1.5','1.5 倍']].map(([value,label]) => `<option value="${value}" ${String(selfReview.playbackRate) === value ? 'selected' : ''}>${label}</option>`).join('')}</select>
     <label class="form-label" for="self-review-notes">具体卡点或想和外教聊的内容</label><textarea id="self-review-notes" name="notes" class="prompt-box short-box" placeholder="例如：01:20 这句话听了几遍才懂；能听懂，但让我自己说就卡住了。">${escape(selfReview.notes)}</textarea><p id="self-review-status" class="muted small-text" role="status">自评仅保存在本浏览器，复制外教指令时会一起带上。</p></form>
-    <div class="actions"><a href="#tutor" class="button">带着自评，和外教聊一聊 →</a></div></section>`;
+    <div class="actions"><a href="#tutor" class="button">带着自评开始陪练</a></div></section>`;
 }
 
 function lessonView() {
-  return `<section class="content-section"><div class="section-title"><h3>本周目标</h3><span class="muted small-text">${escape(lesson.level)}</span></div><ul class="goals">${lesson.goals.map(goal => `<li>${escape(goal)}</li>`).join('')}</ul></section>
-    ${lesson.studyPlan?.length ? `<section class="content-section"><h3>每天一小时 · 本周表达训练</h3>${list(lesson.studyPlan)}</section>` : ''}
-    <section class="content-section" id="video">${videoSection()}<div class="actions"><a class="button secondary" href="#lesson/text">阅读本课课文 ↓</a><a class="inline-link" href="#lesson/self-review">填写观看感受 ↓</a></div></section>
-    <section class="content-section" id="text" aria-labelledby="text-title"><div class="status-row"><h3 id="text-title">本课英文原文与中文释义 <span class="heading-en">${escape(lesson.englishTitle)}</span></h3><button class="button secondary small" id="toggle-translation" aria-pressed="false">隐藏中文</button></div><p class="muted small-text">${escape(lesson.source.textNote || "本站原创练习，非视频逐字稿。")}</p>${/^[a-z0-9-]+\.txt$/.test(lesson.source.transcriptFile) ? `<p class="small-text"><a href="./data/transcripts/${escape(lesson.source.transcriptFile)}" download>下载英文课文 TXT ↓</a></p>` : ''}<p class="muted small-text">先理解，再挑核心表达背诵，最后脱稿复述。整段背诵可以分几次完成。</p><ol class="transcript">${lesson.text.map(line => `<li><span class="speaker">${escape(line.speaker)}</span><p class="english" lang="en">${escape(line.en)}</p><p class="translation">${escape(line.zh)}</p></li>`).join('')}</ol></section>
-    ${selfReviewMarkup()}
-    <div class="actions"><a class="button" href="#language">接着练词汇与句型 →</a></div>`;
+  const original = lesson.source.textKind === 'original';
+  const textLabel = original ? '原创工作表达稿' : '完整英文对话';
+  return `<div class="practice-workspace">
+    <section class="video-section" id="video" aria-label="本课视频">
+      <div class="media-card">${videoSection()}</div>
+      <div class="video-actions"><a class="button" href="#tutor">和教练练一遍<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></a><a class="button secondary" href="#lesson/self-review">记录观看感受</a></div>
+      <details class="lesson-goals"><summary>本课目标<span class="details-note">${escape(lesson.level)}</span></summary><ul class="goals">${lesson.goals.map(goal => `<li>${escape(goal)}</li>`).join('')}</ul></details>
+      ${lesson.studyPlan?.length ? `<details class="study-plan"><summary>7 天练习安排<span class="details-note">每天至少 1 小时</span></summary>${list(lesson.studyPlan)}</details>` : ''}
+      <p class="privacy-note">用虚构或脱敏的工作经历练习，不需要公司资料。</p>
+    </section>
+    <section class="reading-pane" id="text" aria-labelledby="text-title">
+      <header class="reading-header"><div><p class="reading-label">精读与背诵</p><h2 id="text-title">${textLabel}</h2></div><button class="button secondary small" id="toggle-translation" aria-pressed="false">隐藏中文</button></header>
+      <div class="reading-toolbar"><span lang="en">${escape(lesson.englishTitle)}</span>${/^[a-z0-9-]+\.txt$/.test(lesson.source.transcriptFile) ? `<a href="./data/transcripts/${escape(lesson.source.transcriptFile)}" download>下载全文<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8m-3-3 3 3 3-3M3 11v3h10v-3"/></svg></a>` : ''}</div>
+      <p class="reading-hint">${original ? '本站原创练习，不是视频字幕。理解后分段背诵，再用自己的话重说。' : '完整对话保留。理解后分段背诵，隐藏中文可专注英文。'}</p>
+      <details class="text-provenance"><summary>${original ? '表达稿说明' : '课文来源与说明'}</summary><p>${escape(lesson.source.textNote || '本站原创练习，非视频逐字稿。')}</p></details>
+      <ol class="transcript">${lesson.text.map(line => `<li><span class="speaker">${escape(line.speaker)}</span><p class="english" lang="en">${escape(line.en)}</p><p class="translation">${escape(line.zh)}</p></li>`).join('')}</ol>
+      <div class="reading-end"><span>全文结束</span><a href="#language">练习词汇与句型</a></div>
+    </section>
+    </div>
+    ${selfReviewMarkup()}`;
 }
 
 function languageView() {
   return `<section class="content-section" id="words"><h3>核心词汇与搭配</h3><p class="muted small-text">结合例句记忆，再换成你自己的工作场景。</p><div class="vocab-list">${lesson.vocabulary.map(word => `<article class="vocab-row"><div><h4 lang="en">${escape(word.word)}</h4><span class="ipa">${escape(word.ipa)}</span><p class="meaning">${escape(word.meaning)}</p></div><div><p class="example" lang="en">${escape(word.example)}</p><p class="muted small-text">${escape(word.note)}</p></div></article>`).join('')}</div></section>
     <section class="content-section" id="grammar"><h3>把句型变成自己的表达</h3>${lesson.patterns.map(pattern => `<article class="pattern"><h4>${escape(pattern.form)}</h4><p>${escape(pattern.explanation)}</p><p class="example" lang="en">${escape(pattern.example)}</p>${pattern.contrast ? `<p class="muted small-text">${escape(pattern.contrast)}</p>` : ''}</article>`).join('')}</section>
-    <section class="content-section" id="pronunciation"><h3>美音练习重点</h3><p class="muted">请外教听真实音频，选 1—3 个重点纠正，再用新句复测。这些是观察目标，并非已发现的个人错误。</p>${list(lesson.pronunciationTargets)}<h4>本周核心背诵</h4><div class="memorize" lang="en">${list(lesson.memorize)}</div></section><div class="actions"><a href="#quiz" class="button">可选：复习几个表达 →</a></div>`;
+    <section class="content-section" id="pronunciation"><h3>美音练习重点</h3><p class="muted">请外教听真实音频，选 1—3 个重点纠正，再用新句复测。这些是观察目标，并非已发现的个人错误。</p>${list(lesson.pronunciationTargets)}<h4>本周核心背诵</h4><div class="memorize" lang="en">${list(lesson.memorize)}</div></section><div class="actions"><a href="#quiz" class="button">可选：复习几个表达</a></div>`;
 }
 
 function quizView() {
-  return `<section class="content-section"><h3>可选表达练习</h3><p class="muted">根据视频内容和本课表达编写的练习。帮助回顾，做题成绩不代表口语水平；也可以直接找外教对话。</p>${quizMarkup()}</section><div class="actions"><a href="#tutor" class="inline-link">练会了，找外教聊一聊 →</a></div>`;
+  return `<section class="content-section"><h3>可选表达练习</h3><p class="muted">回顾本课内容与表达。做题成绩不代表口语水平，也可以直接找外教对话。</p>${quizMarkup()}</section><div class="actions"><a href="#tutor" class="inline-link">开始外教陪练</a></div>`;
 }
 
 function tutorPrompt() {
@@ -108,11 +122,13 @@ lessonId: ${lesson.id}
 素材状态：${lesson.source.status === 'verified' ? `已核实的视频来源：${lesson.source.title}（${lesson.source.url}）。仅凭本指令不得声称已观看或听过视频。` : '原创练习；视频待核实。没有视频字幕，请勿声称已看过或听过外部视频。'}
 课文说明：${lesson.source.textNote || '本站原创配套练习'}
 目标：${lesson.goals.join('；')}
+文本类型：${lesson.source.textKind === 'original' ? '本站原创工作表达稿。不是视频原文、字幕或讲者原话；不要将稿中的虚构事实归给视频、讲者或学习者。' : '按课文说明使用并保留来源归属。'}
+隐私要求：练习只用虚构或脱敏信息，不要求学习者交出公司秘密、客户信息或内部资料。
 视频自评（尚未填写的项目请在对话中询问，不要推断）：${JSON.stringify(selfReview)}
 媒体与字幕条件：${lesson.source.captions || '请询问实际观看条件。'}
 本周练习安排：${lesson.studyPlan?.join('\n') || '按本课目标与实际时间安排。'}
 
-课文（${lesson.source.status === 'verified' ? '来源：' + lesson.source.title : '本站原创'}）：
+${lesson.source.textKind === 'original' ? '原创工作表达稿（本站编写；非视频逐字稿）' : `课文（${lesson.source.status === 'verified' ? '来源：' + lesson.source.title : '本站原创'}）`}：
 ${lesson.text.map(line => `${line.speaker}: ${line.en}`).join('\n')}
 
 核心表达：
@@ -134,8 +150,8 @@ ${JSON.stringify(feedbackTemplate(lesson.id, selfReview), null, 2)}
 }
 
 function tutorView() {
-  return `<section class="content-section"><h3>看完视频，和外教聊一聊</h3><p class="muted">先在「视频与课文」记录简单／适合／困难及卡点，再复制下面的指令到 GPT 语音会话。外教会聊视频内容、让你复述并换个场景使用表达，逐步了解你的水平。</p><p class="notice">不另设开课测试，也不要求达到固定分数才调整课程。先交流，再纠正；下一课根据你的感受和实际表现共同决定。</p>
-    <label class="form-label" for="tutor-prompt">本周专属外教指令（包含当前视频自评）</label><textarea id="tutor-prompt" class="prompt-box" readonly>${escape(tutorPrompt())}</textarea><div class="actions"><button class="button" id="copy-tutor">复制本课指令 ↗</button><a href="#progress" class="button secondary">带回外教反馈</a></div><p class="muted small-text">只有真正分析了原始音频，才能评价发音和口语流畅度。外教指令包含课文，仍不能声称已观看或听过视频。</p></section>
+  return `<section class="content-section"><h3>把本课练成一次工作表达</h3><p class="muted">记录观看感受，再复制指令到 GPT 语音会话。先独立说明，再接受追问、纠正与重说。</p><p class="notice">练习只用虚构或脱敏情境，不需要公司资料。不另设开课测试，不用固定分数决定下一课。</p>
+    <label class="form-label" for="tutor-prompt">本课外教指令（包含自评与文本来源说明）</label><textarea id="tutor-prompt" class="prompt-box" readonly>${escape(tutorPrompt())}</textarea><div class="actions"><button class="button" id="copy-tutor">复制本课指令</button><a href="#progress" class="button secondary">带回外教反馈</a></div><p class="muted small-text">只有实际分析了原始音频，才能评价发音和口语流畅度。提供课文不代表外教看过视频。</p></section>
     <section class="content-section"><h3>可选场景热身</h3>${list(lesson.practiceScenarios)}<details><summary>本周反馈模板</summary><textarea id="feedback-template" class="prompt-box" aria-label="本课 JSON 反馈模板" readonly>${escape(JSON.stringify(feedbackTemplate(lesson.id, selfReview), null, 2))}</textarea><div class="actions"><button id="copy-template" class="button secondary">复制空白模板</button></div></details></section>`;
 }
 
@@ -154,7 +170,7 @@ function updateJourney() {
   bar.max = state.total; bar.value = state.completed;
   document.querySelector('.progress-number > span').textContent = `/ ${state.total} 周`;
   document.querySelector('#progress-description').textContent = `已复核完成 ${state.completed} 周。${state.completed === state.total ? '半年计划已完成，可以回顾学习成果。' : '根据学习反馈调整下一课，不按日期自动推进。'}`;
-  document.querySelector('#week-label').textContent = `WEEK ${String(lesson.week).padStart(2, '0')} / ${weekDates(progress.learner.startDate, lesson.week)}`;
+  document.querySelector('#week-label').textContent = `第 ${lesson.week} 周　${weekDates(progress.learner.startDate, lesson.week)}`;
   document.querySelector('#week-title').textContent = lesson.title;
   document.querySelector('#week-summary').textContent = lesson.summary;
   const record = progress.records.find(item => item.lessonId === lesson.id);
@@ -173,7 +189,7 @@ function showFeedback(result) {
 }
 
 function bindEvents() {
-  const mediaFailed = () => { document.querySelector('#video-help').textContent = '视频暂时加载失败，请使用下方官方课程或直接视频链接；也可先阅读课文。'; };
+  const mediaFailed = () => { document.querySelector('#video-help').textContent = '视频暂时加载失败，请打开下方视频来源网页；也可先阅读本课表达材料。'; };
   document.querySelector('video')?.addEventListener('error', mediaFailed);
   document.querySelector('video source')?.addEventListener('error', mediaFailed);
   document.querySelector('audio')?.addEventListener('error', mediaFailed);

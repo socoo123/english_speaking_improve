@@ -410,163 +410,105 @@
     "week": 0
   },
   {
-    "id": "02",
+    "id": "02-workplace",
     "number": "02",
     "week": 1,
-    "title": "用简单英语把事情讲清楚",
-    "englishTitle": "He Said – She Said",
-    "category": "工作 · 说明经过、原因与结果",
-    "level": "B1 · 首遍纯听，表达优先",
+    "title": "把 API 方案讲给同事听",
+    "englishTitle": "APIs Explained (in 4 Minutes)",
+    "category": "工作 · 会议更新 / 方案展示 / 技术分享 / 面试",
+    "level": "B1 表达支持 · 真实技术讲解",
     "status": "available",
-    "summary": "5 分钟美音，首遍只听声音，再看英文字幕核对。每天至少 1 小时，重点练用熟悉的词讲项目、解释问题、回应追问。",
+    "summary": "从 3 分 57 秒的真实 API 技术讲解开始，练清楚问题、方案、取舍与下一步。不是情景喜剧；配套原创表达稿帮你把技术知识变成工作中的英语。",
     "goals": [
-      "正常速度首遍只听声音，不先读课文；说出双方对迟到的解释，再开视频核对",
-      "用问题—行动—结果三句短句讲清一件事；忘词时换简单说法，先把意思说完",
-      "从项目成果扩展到说明延期、澄清不同看法和提出下一步；提示后脱稿重说，再换场景"
+      "看官方技术讲解，用自己的话解释 API 的用途与一次请求—响应；不背定义，不假装看懂",
+      "用短句说明问题、方案和取舍，向技术与非技术同事展示同一个想法",
+      "在会议更新、方案展示、技术分享和技术面试中独立回答追问；事实不明时说明还需要核实"
     ],
     "source": {
       "status": "verified",
-      "provider": "voa",
-      "youtubeId": null,
-      "title": "Let’s Learn English — Level 2, Lesson 3: He Said - She Said",
-      "url": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-3/4027340.html",
-      "mediaUrl": "https://voa-video-ns.akamaized.net/pangeavideo/2021/02/e/ee/ee3e6fb5-9ea6-4f8b-88b4-c24e14fb2780_240p.mp4?cb=edc3e7884",
-      "transcriptUrl": "https://learningenglish.voanews.com/a/lets-learn-english-level-2-lesson-3/4027340.html",
-      "lessonPlanUrl": "https://docs.voanews.eu/en-US-LEARN/2021/05/12/e0b2588c-bbe4-4a4e-ad46-79a95f277b63.pdf",
-      "licenseUrl": "https://learningenglish.voanews.com/p/6021.html",
-      "licenseSummary": "来源：VOA Learning English，He Said - She Said。VOA 使用声明将其独立制作的文字、音频与视频列为公有领域，第三方素材除外。本页署名节选官方教学对话；中文释义、例句、训练计划与练习为本站原创。媒体从官方服务器播放，不镜像素材。",
-      "verifiedAt": "2026-11-08",
-      "duration": "05:00",
-      "durationSeconds": 300.4,
-      "listeningFirst": true,
-      "captions": "视频画面内置英文字幕，不可关闭。默认只播放同一视频的声音；打开画面后会看到英文字幕。自评备注请分别写首遍纯听与后续字幕核对的感受，看过字幕后选英文字幕或混合使用。",
-      "notes": "官方课程页与媒体页均标 5 分钟。已下载此 240p 文件（HTTP 200），FFmpeg 读取时长 300.40 秒，抽查画面确认内置英文字幕。只听声音不等于获得无字幕版视频；本课不加倍速。YouTube ID 未核实。PDF 链接由官网提供，不宣称逐句校对 PDF。",
-      "textNote": "以下为 VOA 官网对话节选，按原顺序保留；省略 Professor Bot 语法讲解及部分台词，不是完整逐字稿，也没有逐秒时间轴。完整英文见官方课程页。中文为本站释义；配套工作例句为原创，不是视频内容。",
-      "transcriptFile": "week-01-he-said-she-said-excerpts.txt"
+      "provider": "youtube",
+      "youtubeId": "bxuYDT-BWaI",
+      "title": "APIs Explained (in 4 Minutes)",
+      "url": "https://www.youtube.com/watch?v=bxuYDT-BWaI",
+      "mediaUrl": null,
+      "transcriptUrl": "https://www.youtube.com/watch?v=bxuYDT-BWaI",
+      "lessonPlanUrl": null,
+      "licenseUrl": "https://www.youtube.com/static?template=terms",
+      "licenseSummary": "视频作者：Exponent（现频道名 Aced / formerly Exponent）。未取得视频或字幕的站外转载许可；YouTube 条款允许通过其提供的嵌入播放器观看，不等于授权复制字幕。本站仅链接/嵌入官方视频，不镜像媒体或字幕；以下表达稿、中文释义和练习为本站原创，不是视频逐字稿。",
+      "verifiedAt": "2026-11-16",
+      "duration": "03:57",
+      "durationSeconds": 236.761,
+      "listeningFirst": false,
+      "captions": "来源读取返回英文自动生成字幕，可能有识别错误，未逐句核对。浏览器短时检查中字幕按钮显示 unavailable；实际字幕功能以播放器为准，不保证始终可用。按真实观看条件填写自评，不默认无字幕。",
+      "notes": "官方视频页核实标题、频道、ID、2023-05-22 发布日期，来源元数据显示 03:57。浏览器短时播放观测实际媒体时长 236.761 秒（约 03:57），页面时间显示 3:56；不把标题中的 4 Minutes 当作精确时长。主题为 API 的用途、请求与响应及 Web API 基本结构，是技术讲解而非正式会议录像。保留完整短讲解，不为凑 4—6 分钟拼接素材。官方页首次完整加载超时但播放器随后能短时播放，不保证所有网络可播放；未完整核听内容、音质或独立核听美音。来源课程页及作者条款页返回 403，未绕过；未据此声称拿到转载许可。",
+      "textKind": "original",
+      "textNote": "以下是本站原创工作表达稿，围绕一个虚构的订单查询接口方案，不是视频字幕、翻译或讲者原话。视频提供 API 概念输入；会议、演示、取舍与故障处理均为原创迁移练习。样例不是学员真实经历或已测量成果；完整视频与平台可用字幕请回官方页。",
+      "transcriptFile": "week-01-workplace-api-original.txt"
     },
     "text": [
-      {
-        "speaker": "Anna",
-        "en": "Today, Pete and I are meeting with a consultant who will help us with our new show. Yesterday, Pete had promised to meet me here at 8:00 am. but he did not come on time.",
-        "zh": "今天 Pete 和我要见一位帮助我们筹备新节目的顾问。昨天他答应早上八点在这里见我，但没有准时到。"
-      },
-      {
-        "speaker": "Kelly",
-        "en": "You two are late -- exactly 43 minutes late! What happened?",
-        "zh": "你们俩迟到了，整整迟到四十三分钟！发生什么事了？"
-      },
-      {
-        "speaker": "Anna",
-        "en": "He had to get his \"special\" coffee -- SPECIAL coffee!",
-        "zh": "他非要买他的“特别”咖啡！"
-      },
-      {
-        "speaker": "Pete",
-        "en": "She had to feed her birds -- HER birds!",
-        "zh": "她非要去喂她的鸟！"
-      },
-      {
-        "speaker": "Kelly",
-        "en": "Okay, I can see already that you need my help. You can’t both talk at the same time. You have to take turns. Alright, Anna, you go first.",
-        "zh": "好，我已经看出你们需要我的帮助了。你们不能同时说，要轮流说。Anna，你先来。"
-      },
-      {
-        "speaker": "Anna",
-        "en": "Sure. Kelly, see, Pete and I live in the same building. So, we decided to meet at 8:00 a.m. - 8:00 a.m. to come to work together. I had waited 15 minutes when Pete arrived!",
-        "zh": "好。Kelly，Pete 和我住在同一栋楼，所以约好八点见，一起上班。他到的时候，我已经等了十五分钟！"
-      },
-      {
-        "speaker": "Anna",
-        "en": "After Pete had wasted time waiting for coffee, we were late. I left you a message.",
-        "zh": "Pete 等咖啡耽误了时间，之后我们就迟到了。我给你留了言。"
-      },
-      {
-        "speaker": "Kelly",
-        "en": "Hum. I didn’t get that message.",
-        "zh": "嗯，我没有收到那条留言。"
-      },
-      {
-        "speaker": "Pete",
-        "en": "Yeah, that’s not why we’re late. This is why we’re late: I had arrived on time at 8:00 a.m. but didn’t see Anna. She was standing behind a tree. I think she was hugging it. I always walk to work. But she said that would take too long and that a scooter would be much faster. It was awful. I hated it. And it added too much time to our commute!",
-        "zh": "那不是我们迟到的原因。我八点准时到了，但没看到 Anna。她站在树后面，我觉得她在抱树。我平时走路上班，但她说太慢了，滑板车会快很多。体验糟透了，而且让通勤花了更多时间！"
-      },
-      {
-        "speaker": "Pete",
-        "en": "Then Anna stopped by a pond to feed the birds. She had named them after characters from books and yelled the names out loud … Romeo! Juliet! Sherlock!",
-        "zh": "然后 Anna 在池塘边停下喂鸟。她用书里的人物给鸟起名，还大声喊它们：罗密欧、朱丽叶、夏洛克！"
-      },
-      {
-        "speaker": "Pete",
-        "en": "By the time she had fed all the birds, we were late.",
-        "zh": "等她喂完所有的鸟，我们已经迟到了。"
-      },
-      {
-        "speaker": "Kelly",
-        "en": "This is what I think. You two see the same event very differently. Does this happen often with you two?",
-        "zh": "我是这样看的：你们对同一件事的看法很不一样。你们经常这样吗？"
-      },
-      {
-        "speaker": "Kelly",
-        "en": "Okay. This is good. This is good! It’s good to see things differently. I have an idea: we will call the show \"He Said, She Said.\" For every story, you tell a different point of view.",
-        "zh": "这也很好！从不同角度看事情有好处。我有个主意：节目就叫“他说，她说”。每个故事，你们各自讲出不同的观点。"
-      },
-      {
-        "speaker": "Anna",
-        "en": "That is a great idea, Kelly! Pete, we are different. That’s why I thought of you for this job!",
-        "zh": "好主意，Kelly！Pete，我们确实不同，所以我才想到让你来做这份工作！"
-      }
+      { "speaker": "原创示范 · 问题", "en": "Let me start with the problem. In this example, our support team checks order details in two different tools. I want to make that process simpler.", "zh": "先说问题。在这个虚构例子里，客服团队要在两个工具中查看订单信息。我想让这个过程更简单。" },
+      { "speaker": "原创示范 · 方案", "en": "My proposal is to let the support tool request order details through an API. The order service would return the fields that the support team is allowed to see.", "zh": "我的方案是让客服工具通过 API 请求订单信息。订单服务只返回客服团队有权查看的字段。" },
+      { "speaker": "原创示范 · 简单解释", "en": "An API gives one system a defined way to ask another system for something. The caller does not need to know every step inside the other system.", "zh": "API 为一个系统向另一个系统请求信息或操作提供约定好的方式。调用方不需要了解对方系统内部的每个步骤。" },
+      { "speaker": "原创示范 · 演示步骤", "en": "Here is the flow I would show in a demo. A user enters an order ID. The tool sends a request, and the service checks access before returning a response.", "zh": "演示时我会这样说明流程：用户输入订单编号，工具发送请求，服务检查访问权限后返回响应。这是拟议流程，不是声称已做完的演示。" },
+      { "speaker": "原创示范 · 取舍", "en": "This could save people from switching between tools. The trade-off is that the support tool would depend on another service. We need to decide what users see if that service is unavailable.", "zh": "这可能减少用户在工具之间切换。但代价是客服工具会依赖另一个服务。我们需要决定对方服务不可用时向用户显示什么。" },
+      { "speaker": "原创示范 · 会议更新", "en": "For this practice scenario, the response fields are still under discussion. The next step is to agree on those fields with the order team. I need their input before we build the demo.", "zh": "在这个练习场景中，响应字段还在讨论。下一步是和订单团队约定这些字段。做演示前，我需要他们的意见。" },
+      { "speaker": "原创示范 · 回答追问", "en": "That is a fair question. I do not have test results yet, so I cannot say how much time this would save. I would compare the current workflow with the demo before making that claim.", "zh": "这个问题很合理。我还没有测试结果，不能说到底能省多少时间。我会先比较现有流程与演示方案，再作这样的判断。" },
+      { "speaker": "原创示范 · 确认理解", "en": "Let me put it another way: we want one tool to ask for the information it needs, without giving it access to everything. Does that address your concern?", "zh": "我换个说法：我们希望一个工具能够请求它需要的信息，而不是让它能访问所有内容。这样是否回应了你的顾虑？" }
     ],
     "vocabulary": [
-      { "word": "take turns", "ipa": "/teɪk tɝnz/", "meaning": "轮流", "example": "Let's take turns explaining what happened.", "note": "视频表达；先听对方讲完，再补充自己的观察。例句为原创。" },
-      { "word": "on time", "ipa": "/ɑn taɪm/", "meaning": "准时", "example": "We finished the task on time.", "note": "视频表达；用熟悉的 finish / start 配合它即可。" },
-      { "word": "point of view", "ipa": "/pɔɪnt əv vju/", "meaning": "观点；看事情的角度", "example": "From my point of view, we need more time to test it.", "note": "视频表达；想不起来可以说 I think，不必停下找高级表达。" },
-      { "word": "leave a message", "ipa": "/liv ə ˈmɛsɪdʒ/", "meaning": "留言", "example": "I left a message to explain the delay.", "note": "视频表达；leave 的过去式是 left，解释后确认对方收到。" },
-      { "word": "reduce build time", "ipa": "/rɪˈdus bɪld taɪm/", "meaning": "减少构建耗时", "example": "We reduced build time by removing an unnecessary step.", "note": "上课待练搭配；原创例句，不是视频台词，也不代表你的真实项目事实。" },
-      { "word": "let me put it another way", "ipa": "/lɛt mi pʊt ɪt əˈnʌðɚ weɪ/", "meaning": "让我换个说法", "example": "Let me put it another way. We spend less time waiting now.", "note": "原创表达工具；忘词时换成更简单的解释，不必从头重来。" }
+      { "word": "request / response", "ipa": "/rɪˈkwɛst/ /rɪˈspɑns/", "meaning": "请求 / 响应", "example": "The tool sends a request and waits for a response.", "note": "API 核心概念；例句为原创。想不起术语时可以说 ask for information / send information back。" },
+      { "word": "proposal", "ipa": "/prəˈpoʊzəl/", "meaning": "方案；提议", "example": "My proposal is to start with a small demo.", "note": "用来介绍尚未执行的方案，不把计划说成已完成成果。" },
+      { "word": "trade-off", "ipa": "/ˈtreɪdˌɔf/", "meaning": "取舍；得到好处时付出的代价", "example": "The trade-off is that we depend on another service.", "note": "忘词时说 This helps us, but … 就能继续交流；不强制使用术语。" },
+      { "word": "depend on", "ipa": "/dɪˈpɛnd ɑn/", "meaning": "依赖", "example": "The support tool depends on the order service.", "note": "说明系统依赖，也能引出服务不可用时怎么办的追问。" },
+      { "word": "confirm", "ipa": "/kənˈfɝm/", "meaning": "确认；核实", "example": "We need to confirm which fields the team needs.", "note": "区分已确认事实与仍需核实的信息。" },
+      { "word": "reduce build time", "ipa": "/rɪˈdus bɪld taɪm/", "meaning": "减少构建耗时", "example": "We could remove an unnecessary step to reduce build time.", "note": "复习第 0 周搭配；这是可能的行动，不是学员已实现的成果，使用真实经历时需本人提供事实。" },
+      { "word": "let me put it another way", "ipa": "/lɛt mi pʊt ɪt əˈnʌðɚ weɪ/", "meaning": "让我换个说法", "example": "Let me put it another way: one tool asks another tool for data.", "note": "用已有词汇解释用途，不必停下来寻找高级词。" }
     ],
     "patterns": [
-      { "form": "问题 → 行动 → 结果", "explanation": "先用三句短句交代事实，再按追问补细节。例句是虚构教学场景；自己的数字与行动由你提供。", "example": "The build was slow. I removed an unnecessary step. Now the team waits less." },
-      { "form": "First … Then … In the end …", "explanation": "用熟悉的连接词交代顺序。时间关系清楚时用一般过去时即可，本周不强制使用过去完成时。", "example": "First, I checked the logs. Then I changed one setting. In the end, the service worked again." },
-      { "form": "I think … because … / For example, …", "explanation": "表达观点时补一个理由，再用具体例子支持；避免只说 good / bad。", "example": "I think we need more time because one test still fails." },
-      { "form": "The problem was … / What I mean is …", "explanation": "想不起术语时解释现象、用途或影响。先把主干讲完，再补充，不必把中文长句逐字翻译。", "example": "The problem was that people had to wait. What I mean is, they could not test their changes quickly." },
-      { "form": "复习：主语 + wants；a people person", "explanation": "单数第三人称在一般现在时用 wants；people person 是可数单数搭配，要有 a。先独立回答，纠正后换个人再说一次。", "example": "My manager wants a clearer update. She is a people person.", "contrast": "避免：My manager want；She is very people person。" },
-      { "form": "识别即可：had + 过去分词", "explanation": "视频讲过去完成时：相对于另一个过去时刻，某件事已经发生。先听懂先后，不必为套时态而阻塞表达。", "example": "The meeting had started when I arrived." }
+      { "form": "The problem is … / My proposal is … / The next step is …", "explanation": "会议发言先交代问题、提议和下一步，每句只讲一个意思。以下为虚构练习，不代表自己的项目。", "example": "The problem is that we use two tools. My proposal is to connect them through an API. The next step is to agree on the response fields." },
+      { "form": "First … Then … Finally …", "explanation": "演示时按信息流解释，不需要复杂句。指出每一步由谁完成。", "example": "First, the tool sends a request. Then, the service checks access. Finally, it returns the order details." },
+      { "form": "This could …, but … / The trade-off is …", "explanation": "把预期好处和代价放在一起；could 表示可能，未测量的结果不说成事实。", "example": "This could make the workflow simpler, but we would depend on another service." },
+      { "form": "If …, we would need to …", "explanation": "回应方案追问，讨论假设情况，不要求用高级词。", "example": "If the service were unavailable, we would need to show a clear message." },
+      { "form": "I do not know … yet. I would check …", "explanation": "不知道时说明证据缺口和核实方法，比编数字更专业。", "example": "I do not know the time saved yet. I would check it with a small user test." },
+      { "form": "复习：主语 + wants / 问题 → 行动 → 结果", "explanation": "经理是单数第三人称，用 wants。面试经历只讲真实、脱敏的行动与结果；没有这类经历就明确改用假设方案。", "example": "My manager wants a clearer update. I can explain the problem first.", "contrast": "避免 My manager want。a people person 是上课可选复习搭配，不强行塞进技术解释。" }
     ],
     "pronunciationTargets": [
-      "wants /wɑnts/、build /bɪld/：在真实音频中检查词尾是否清楚；目前没有已核实的个人发音错误。",
-      "First … / Then … / In the end …：按意思分组，允许自然停顿，不要求赶速度。",
-      "reduce /rɪˈdus/、result /rɪˈzʌlt/：观察主重音；若有实际问题，每轮选 1—3 个点并用新句复测。"
+      "API /ˌeɪ pi ˈaɪ/：字母分开读；request /rɪˈkwɛst/、response /rɪˈspɑns/ 观察重音，仅在实际音频中判断。",
+      "wants /wɑnts/、fields /fildz/、build /bɪld/：在新句中观察词尾是否影响理解，不预设学员已有错误。",
+      "按问题、方案、取舍分组停顿；允许思考，不用计时或赶语速替代清楚表达。每轮有音频才选 1—3 个实际问题复测。"
     ],
     "memorize": [
-      "The problem was … I … As a result, …",
-      "First, … Then, … In the end, …",
-      "I think … because …",
+      "Let me start with the problem. …",
+      "My proposal is … The next step is …",
+      "This could help us …, but …",
+      "I do not have that information yet. I would check …",
       "Let me put it another way. …"
     ],
     "practiceScenarios": [
-      "技术面试：独立用三句讲一次真实、脱敏的项目改进。外教先问具体做了什么，再问结果如何得知；不替你编行动或数字。",
-      "项目同步：一次任务没有准时结束。说明发生了什么、为什么、接下来怎么做；外教追问什么时候能再给更新。",
-      "团队协作：同事认为是需求变了，你认为是测试花了更多时间。先复述对方观点，再说自己观察到的事实，讨论如何核实。",
-      "非技术沟通：向不懂构建流程的同事解释为什么这项改进有用。忘掉术语，用等待时间、工作步骤和影响来说明。",
-      "生活迁移：去见朋友的路上迟到了。说明经过、道歉并提出新的见面安排；换一个原因，不重复工作答案。"
+      "会议更新：在虚构订单接口项目中，响应字段尚未确认。用三句说明当前问题、下一步、需要谁的帮助。外教先只问 What is the current blocker?，等回答后再问下一步；不要替你提前组织答案。",
+      "方案展示：向产品经理提议用 API 连接两个工具。先讲问题和预期好处，再主动说明一个代价。外教一次只追问一个限制，如订单服务不可用或访问权限，不把原创方案说成视频原话。",
+      "技术分享：向新同事用自己的例子解释一次请求—响应，再给非技术同事换一种简单说法。外教追问 What does the caller need to know?，不要求背定义或高级词。",
+      "技术面试：讲一段真实、脱敏的项目经历，说明问题、自己的行动、结果与依据；外教追问 Why did you choose that approach?。没有相关经历就明确做假设设计，不编项目成果、数字或个人贡献。",
+      "新限制迁移：本轮不提前展示范文，外教在前四类任务中选择尚未练过的一类，再加入一个新条件。记录首次回答、提示和重说的区别；生活任务仅在本人愿意时替换，不固定每天加入。"
     ],
     "studyPlan": [
-      "每天 60 分钟：听力与核对 15 分钟；脱稿表达 15 分钟；外教追问、纠正与重说 25 分钟；复盘 5 分钟。开口练习可以拆成两段，额外时间再补听读。",
-      "第 1 天：首遍只听声音，正常速度，不提前读课文。用自己的话说双方迟到的理由；再看英文字幕核对。在备注分别写纯听与核对后的感受。",
-      "第 2 天：分别从 Anna、Pete 的角度讲经过，用 first / then / because 即可。把不确定的地方说成 Anna says / Pete says，不把一方说法当作已证实事实。",
-      "第 3 天：复习第一课项目成果：三句讲问题、行动、结果。只记关键词，不写整篇稿；外教纠正后合上提示再说。",
-      "第 4 天：练任务延期更新。说明原因、当前行动与下一步；外教改变一个条件，再让你回答，观察能否迁移。",
-      "第 5 天：讨论不同观点。先说明对方担心什么，再说你的理由；练两个工作场景后，加一个旅行或见朋友的生活场景。",
-      "第 6 天：向非技术听众重讲项目，再回答一条未提前准备的追问。忘词时练解释用途或影响，不强迫用新词。",
-      "第 7 天：不看范文重讲一件事，比较需要多少提示、原因和结果是否更清楚；外教写反馈。只有实际听取原始音频时才评口语流畅度和发音，本人确认后再复核周进度。"
+      "每天建议至少 60 分钟：视频理解与核对 15 分钟；脱稿表达 15 分钟；外教单问追问、纠正与重说 25 分钟；复盘 5 分钟。约 10 小时仍是可选周目标，计划不算实际完成时长。",
+      "第 1 天：看完整 03:57 官方视频，不先背本站稿。说出 API 有什么用、请求与响应是什么；按实际情况记录字幕、倍速、简单／适合／困难和卡点。没有理解的地方明确说不知道。",
+      "第 2 天：把视频按意思自行暂停成短段，核对平台字幕中的关键词；不使用虚构时间码。再用自己的例子向非技术同事解释 API。之后读本站原创稿，分清视频概念与虚构工作方案。",
+      "第 3 天：练会议更新。只看三个关键词，讲问题、下一步、需要的帮助。外教每次问一个问题，先听独立版本，纠正后合上提示再说。",
+      "第 4 天：练方案展示。讲一个好处和一个代价，再回应服务不可用的追问。把未验证结果说成预期，不编省时比例；用简单词也算有效表达。",
+      "第 5 天：练技术分享。画自己的请求—响应草图，边指边解释；再向非技术同事重讲。外教追问一个未准备的细节，卡住时先换词或拆句，不先给整段范文。",
+      "第 6 天：练技术面试。用真实脱敏经历讲问题、行动、结果和依据；没有合适经历就明确讨论假设方案。复习 wants、reduce build time，按需要复习 a people person，不硬塞搭配。",
+      "第 7 天：不看原创稿，完成一次未提前示范的工作任务，再回答一个新限制。比较清晰度与提示依赖，输出本课反馈 JSON。未听取原始音频则 fluency、pronunciation 为 null；本人确认后仍需维护者复核，不自动推进。"
     ],
-    "assessmentFocus": "本课 lessonId=02，第 1 周。上课依据是 GPT 文字报告：任务 4、互动 4、语言 3，给过提示；发音与口语流畅度未评估，不当成已核实独立口语水平。本人说原视频偏简单、表达会卡住，想用现有词汇说清楚，下周每天至少 1 小时。先核实本课是否首遍只听声音（没有画面），还是直接看了内置英文字幕；若随后看字幕，learnerFeedback.captions 填 en 或 mixed，并在 notes 区分两遍条件、难度与卡点，不能称视频字幕可关闭。保持 1 倍速，主要只减少首遍文字支持，不增加计时或复杂语法要求。先请他解释 Anna 和 Pete 各自说了什么；不提前给答案。以每次一个问题迁移到项目成果、延期说明和不同观点。先三句短句，卡住先鼓励换简单词，必要时按关键词—句子开头—单句示范逐级提示。答完再纠正 1—2 处，要求脱稿重说；随后换细节或场景。追问行动与结果时不替他编事实。回顾 wants、a people person、reduce build time；过去完成时只需识别，不强制输出。报告分别写首次独立表达、具体提示、提示后表现与新场景表现；清楚表达优先于生词和长句。若纯听仍轻松且独立表达有进步，再讨论后续更快自然语速；若听懂但说不清，保留听力水平并增加组织表达练习。",
+    "assessmentFocus": "本课 lessonId=02-workplace，第 1 周，反馈使用 schemaVersion 2。2026-11-16 学员因不喜欢情景喜剧主动换成真实工作主线；这是内容偏好，不是本课难度或音频评估。第 0 周完成事实与原成绩保留；本课尚未评估。先逐轮核实是否观看、难易、具体卡点、实际字幕与倍速，一次只问一个问题；未观看不得编自评。视频为 Exponent 的 API 概念讲解，所附 text 是本站原创订单接口表达稿，不是视频字幕或讲者台词；无法访问视频时明确只能基于原创稿练表达，不能拿原创稿纠正学员对视频的复述。先请学员用自己的话解释 API 的用途或请求—响应，再在会议更新、方案展示、技术分享、技术面试四类中选择合适任务，逐轮轮换，不一次问完。先听三句独立表达，允许停顿；卡住时先鼓励换简单词，再按澄清问题—关键词—句子开头—必要时单句示范提示。给任何词汇、结构或范例提示都记录 usedHints=true，不能把照读算独立回答。答完再做 1—2 处最小纠正，要求脱稿重说，随后加入一个未示范的新限制。重点观察能否说明问题、方案、取舍、下一步，以及回应追问和区分事实与假设；不强制高级词、复杂时态或量化成果。真实面试经历只能由学员提供，不编公司资料、数字或个人贡献；无经历时明确改为假设设计。复习 wants、reduce build time，a people person 仅适合时复习。evidence.task / interaction / language 分别写首次独立回答、具体提示、重说与新任务表现；learnerFeedback 如实填 watched、difficulty、difficulties、notes、captions、playbackRate。只有实际分析原始音频才能 audioEvidence=true 并评价 fluency / pronunciation；否则两项 null、pronunciationNotes=[]，不可凭文字猜发音或卡顿。结束输出完整 schemaVersion 2 JSON：lessonId、assessedAt、mode、audioEvidence、learnerFeedback、usedHints、learnerConfirmed、scores、evidence、pronunciationNotes、strengths、nextPractice、recommendation、adjustmentReason；日期取实际对话日。证据不足用 incomplete；难度支持优先短分段、术语释义与短句组织，不因 B1 换幼稚剧情。learnerConfirmed 仅在本人明确确认本周完成时为 true；报告不自动更新正式进度。",
     "quiz": [
-      { "id": "q1", "type": "choice", "question": "Anna 和 Pete 对迟到的解释，应该怎样概括？", "options": ["两人提供不同说法，需要区分各自观点与已核实事实。", "已经证明只有 Pete 说的是真的。", "两人的说法完全相同。"], "answer": 0, "explanation": "练习分别转述，不把一个人的解释自动当作事实。题目为本站原创。" },
-      { "id": "q2", "type": "choice", "question": "想不起技术术语时，哪个做法有助于继续交流？", "options": ["停下来，直到找到高级词。", "解释用途或影响：Now the team spends less time waiting.", "让外教替你讲完整个项目。"], "answer": 1, "explanation": "用已有词汇说清意思；随后再补需要的术语。" },
-      { "id": "q3", "type": "fill", "question": "My manager ___ me to explain the result.（want 的正确形式）", "answers": ["wants"], "explanation": "manager 是单数第三人称，一般现在时用 wants。" },
-      { "id": "q4", "type": "fill", "question": "She is ___ people person.", "answers": ["a"], "explanation": "a people person：一个善于与人打交道的人。" },
-      { "id": "q5", "type": "choice", "question": "哪组短句把问题、行动、结果讲得最清楚？（虚构场景）", "options": ["The build was slow. I am great. It was good.", "The build was slow. I removed an unnecessary step. Now we spend less time waiting.", "I worked on a project. It was a project. I like it."], "answer": 1, "explanation": "三句可以完成清楚的表达，不需要复杂词汇。自己的项目事实应自行提供。" }
+      { "id": "q1", "type": "choice", "question": "向非技术同事解释 API，哪句话最清楚？（原创表达练习，不考视频原句）", "options": ["It gives one system a defined way to ask another system for something.", "It means every user can access all our data.", "It is good because it is very technical."], "answer": 0, "explanation": "先说用途；API 不自动意味着开放全部数据，也不需要靠术语堆砌。" },
+      { "id": "q2", "type": "choice", "question": "方案还没有测试，如何回应 How much time will this save?", "options": ["It will save 80 percent.（没有依据）", "I do not have test results yet. I would compare the two workflows.", "The question is not important."], "answer": 1, "explanation": "承认未知并提出核实方法，不编造量化成果。" },
+      { "id": "q3", "type": "fill", "question": "My manager ___ a clearer update.（want 的正确形式）", "answers": ["wants"], "explanation": "单数第三人称在一般现在时用 wants；这是上一课的复习目标，不预设你仍会犯错。" },
+      { "id": "q4", "type": "fill", "question": "The support tool depends ___ the order service.", "answers": ["on"], "explanation": "depend on 表示依赖；可以继续解释依赖服务不可用时的处理。" },
+      { "id": "q5", "type": "choice", "question": "哪句话同时说明预期好处与代价？", "options": ["This will solve every problem.", "It is an API. It is a system.", "This could reduce tool switching, but we would depend on another service."], "answer": 2, "explanation": "把好处和取舍一起说明，could / would 也保留了尚未实现的假设范围。" },
+      { "id": "q6", "type": "choice", "question": "本站订单查询表达稿与官方视频是什么关系？", "options": ["它是视频的完整逐字字幕。", "它是本站原创迁移练习，不代表讲者说过或学员做过。", "它证明学员已完成接口项目。"], "answer": 1, "explanation": "视频用于概念输入；本站虚构方案用于工作表达训练。完整原内容回到官方视频查看。" }
     ]
   }
 ]

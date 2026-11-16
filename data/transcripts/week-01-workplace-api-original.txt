@@ -1,0 +1,40 @@
+把 API 方案讲给同事听 — Original workplace speaking practice
+Lesson: 02-workplace | Week: 1 | Prepared: 2026-11-16
+Written for this learning site. This is NOT a video transcript, translation, or quotation from the speaker.
+Video input: APIs Explained (in 4 Minutes), Exponent (current channel: Aced / formerly Exponent)
+Official video and any platform-available captions: https://www.youtube.com/watch?v=bxuYDT-BWaI
+Duration: 236.761 seconds (about 03:57). The title is not a precise duration.
+No permission to republish the video or its captions has been established. This file contains only original practice writing, not copied captions.
+The order-support scenario below is fictional. It is not the video's story, the learner's experience, or a measured project result. Replace it with truthful, anonymized facts when discussing your own work; otherwise keep it explicitly hypothetical.
+
+原创示范 · 问题
+Let me start with the problem. In this example, our support team checks order details in two different tools. I want to make that process simpler.
+先说问题。在这个虚构例子里，客服团队要在两个工具中查看订单信息。我想让这个过程更简单。
+
+原创示范 · 方案
+My proposal is to let the support tool request order details through an API. The order service would return the fields that the support team is allowed to see.
+我的方案是让客服工具通过 API 请求订单信息。订单服务只返回客服团队有权查看的字段。
+
+原创示范 · 简单解释
+An API gives one system a defined way to ask another system for something. The caller does not need to know every step inside the other system.
+API 为一个系统向另一个系统请求信息或操作提供约定好的方式。调用方不需要了解对方系统内部的每个步骤。
+
+原创示范 · 演示步骤
+Here is the flow I would show in a demo. A user enters an order ID. The tool sends a request, and the service checks access before returning a response.
+演示时我会这样说明流程：用户输入订单编号，工具发送请求，服务检查访问权限后返回响应。这是拟议流程，不是声称已做完的演示。
+
+原创示范 · 取舍
+This could save people from switching between tools. The trade-off is that the support tool would depend on another service. We need to decide what users see if that service is unavailable.
+这可能减少用户在工具之间切换。但代价是客服工具会依赖另一个服务。我们需要决定对方服务不可用时向用户显示什么。
+
+原创示范 · 会议更新
+For this practice scenario, the response fields are still under discussion. The next step is to agree on those fields with the order team. I need their input before we build the demo.
+在这个练习场景中，响应字段还在讨论。下一步是和订单团队约定这些字段。做演示前，我需要他们的意见。
+
+原创示范 · 回答追问
+That is a fair question. I do not have test results yet, so I cannot say how much time this would save. I would compare the current workflow with the demo before making that claim.
+这个问题很合理。我还没有测试结果，不能说到底能省多少时间。我会先比较现有流程与演示方案，再作这样的判断。
+
+原创示范 · 确认理解
+Let me put it another way: we want one tool to ask for the information it needs, without giving it access to everything. Does that address your concern?
+我换个说法：我们希望一个工具能够请求它需要的信息，而不是让它能访问所有内容。这样是否回应了你的顾虑？

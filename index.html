@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="每周 10 小时，用半年练习工作会议与技术面试中的美式英语表达。">
-  <meta name="theme-color" content="#edf4e9">
+  <meta name="description" content="面向会议发言、方案展示、技术分享与面试的工作英语练习台。看视频，用简单英语把事情讲清楚。">
+  <meta name="theme-color" content="#fff9f5">
   <title>码农口语提升指南</title>
   <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/fonts/noto.css">
@@ -13,27 +13,32 @@
 <body>
   <a class="skip-link" href="#main">跳到本周课程</a>
   <div class="site-shell">
-    <header class="site-header"><a class="brand" href="#lesson"><span class="brand-mark" aria-hidden="true">a<span>↗</span></span><span>码农口语提升指南</span></a><a class="repo-link" href="https://github.com/socoo123/english_speaking_improve" target="_blank" rel="noopener noreferrer">GitHub ↗</a></header>
+    <header class="site-header">
+      <a class="brand" href="#lesson"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 10v4m4-8v12m4-15v18m4-15v12m4-8v4"/></svg></span><span>码农口语<span class="brand-subtitle">把英语练进工作里</span></span></a>
+      <div class="header-actions">
+        <details class="journey-progress"><summary><span class="progress-dot" aria-hidden="true"></span><span>学习进度</span><span class="progress-number"><strong id="passed-weeks">0</strong><span>/ 26 周</span></span><svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary><div class="progress-popover"><div class="progress-caption"><span>已复核完成</span><span id="progress-percent">0%</span></div><progress id="learning-progress" max="26" value="0" aria-label="已复核完成的学习周次"></progress><p id="progress-description">复核学习反馈后更新，不按日期自动推进。</p><p class="small-text muted">每天至少 1 小时，额外时间可补到每周约 10 小时。工作忙可跨周练习。</p></div></details>
+        <a class="repo-link" href="https://github.com/socoo123/english_speaking_improve" target="_blank" rel="noopener noreferrer">GitHub<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></a>
+      </div>
+    </header>
     <main id="main" tabindex="-1">
-      <section class="journey glass" aria-labelledby="site-title">
-        <div class="journey-copy"><p class="eyebrow">SPEAK A LITTLE. GROW EVERY WEEK.</p><h1 id="site-title">码农口语提升指南<span>从写代码，到聊方案。</span></h1><p class="intro">半年时间，把英语练进工作里。<br>每周一段视频，边聊边调整。</p><div class="tags"><span class="tag green">B1 起步 · 美音</span><span class="tag orange">每周 10 小时</span><span class="tag coral">80% 工作 · 20% 生活</span></div></div>
-        <div class="journey-progress"><div class="progress-caption"><span>半年学习进度</span><span id="progress-percent">0%</span></div><p class="progress-number"><strong id="passed-weeks">0</strong><span>/ 26 周</span></p><progress id="learning-progress" max="26" value="0" aria-label="已复核完成的学习周次"></progress><p id="progress-description">结合视频自评与外教反馈，复核本周完成情况后更新。</p><details class="plan-details"><summary>每周怎么安排 10 小时？</summary><p>精听 2h · 跟读复述 2.5h · 表达练习 1.5h · 外教对话 3h · 反馈复习 1h。每周一开始，工作忙可跨周补练，不自动增加进度。</p></details></div>
-      </section>
-      <section class="course glass" aria-labelledby="week-title">
-        <header class="course-header"><div><p class="eyebrow" id="week-label">WEEK 00 / 本周课程</p><h2 id="week-title">正在加载课程…</h2><p id="week-summary"></p></div><div class="week-picker"><label for="lesson-select">学习周次</label><select id="lesson-select"><option>第 0 周</option></select><span id="week-status" class="week-status">等待学习反馈</span></div></header>
-        <div class="tabs" role="tablist" aria-label="本周学习内容">
-          <button id="tab-lesson" type="button" role="tab" data-view="lesson" aria-controls="panel-lesson" aria-selected="true">视频与课文</button>
-          <button id="tab-language" type="button" role="tab" data-view="language" aria-controls="panel-language" aria-selected="false" tabindex="-1">词汇与句型</button>
-          <button id="tab-quiz" type="button" role="tab" data-view="quiz" aria-controls="panel-quiz" aria-selected="false" tabindex="-1">可选练习</button>
-          <button id="tab-tutor" type="button" role="tab" data-view="tutor" aria-controls="panel-tutor" aria-selected="false" tabindex="-1">外教陪练</button>
-          <button id="tab-progress" type="button" role="tab" data-view="progress" aria-controls="panel-progress" aria-selected="false" tabindex="-1">反馈与进度</button>
+      <section class="course" aria-labelledby="week-title">
+        <header class="course-header"><div class="course-heading"><p class="week-label" id="week-label">本周课程</p><h1 id="week-title">正在加载课程…</h1><p id="week-summary"></p></div><div class="week-picker"><label for="lesson-select">课程与复习</label><select id="lesson-select"><option>第 0 周</option></select><span id="week-status" class="week-status">等待学习反馈</span></div></header>
+        <div class="lesson-navigation">
+          <div class="tabs" role="tablist" aria-label="本周学习内容">
+            <button id="tab-lesson" type="button" role="tab" data-view="lesson" aria-controls="panel-lesson" aria-selected="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.5" y="3" width="15" height="14" rx="3"/><path d="m8 7 5 3-5 3Z" stroke-linejoin="round"/></svg>视频与课文</button>
+            <button id="tab-language" type="button" role="tab" data-view="language" aria-controls="panel-language" aria-selected="false" tabindex="-1"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 5c-2-2-5-2-7-1v12c2-1 5-1 7 1m0-12c2-2 5-2 7-1v12c-2-1-5-1-7 1V5Z" stroke-linejoin="round"/></svg>词汇与句型</button>
+            <button id="tab-quiz" type="button" role="tab" data-view="quiz" aria-controls="panel-quiz" aria-selected="false" tabindex="-1"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m12 3 5 5-9 9H3v-5L12 3Z" stroke-linejoin="round"/><path d="m10 5 5 5"/></svg>可选练习</button>
+            <button id="tab-tutor" type="button" role="tab" data-view="tutor" aria-controls="panel-tutor" aria-selected="false" tabindex="-1"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16 3H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3l3 3 3-3h3a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z" stroke-linejoin="round"/><path d="M6 7h8M6 11h5"/></svg>外教陪练</button>
+            <button id="tab-progress" type="button" role="tab" data-view="progress" aria-controls="panel-progress" aria-selected="false" tabindex="-1"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 16V9m6 7V4m6 12v-6" stroke-linecap="round"/></svg>反馈与进度</button>
+          </div>
+          <a class="reading-shortcut" href="#lesson/text">背诵课文<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 3v10m-4-4 4 4 4-4"/></svg></a>
         </div>
         <div id="app"><p class="loading">正在准备本周学习内容…</p></div>
         <noscript><p>请启用 JavaScript 查看课程，或到 GitHub 阅读学习文档。</p></noscript>
       </section>
-      <p class="next-week-note"><span aria-hidden="true">↗</span> 下一课，根据你的感受和对话表现调整。反馈复核后记录建议；你确认本周完成，再更新进度。</p>
+      <p class="next-week-note">按自己的节奏练习。下一课根据你的反馈调整，正式进度只在复核后更新。</p>
     </main>
-    <footer class="site-footer"><span>一周一课，学到能用。</span><span>26 周 · 约 260 小时 · 不赶进度</span></footer>
+    <footer class="site-footer"><span>码农口语提升指南</span><span>会议发言 / 方案展示 / 技术分享 / 面试</span></footer>
   </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script type="module" src="./assets/app.mjs"></script>

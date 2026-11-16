@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-08",
+  "updatedAt": "2026-11-16",
   "learner": {
     "startingLevel": "约 B1（自评，通过视频与持续对话逐步校准）",
     "target": "熟悉工作场景中的 B2 沟通能力",
@@ -11,11 +11,11 @@
     "startDate": "2026-11-02",
     "weekStartsOn": "Monday",
     "practicePreferences": {
-      "updatedAt": "2026-11-08",
+      "updatedAt": "2026-11-16",
       "nextWeekMinimumHours": 7,
       "dailyMinimumMinutes": 60,
-      "priority": "用已有词汇独立讲清楚，逐步扩大表达范围；先完成意思，再纠正与重说。",
-      "difficultyAdjustment": "小幅提升：约 5 分钟、正常速度，首遍只听声音；根据无文字支持时的理解和独立表达再考虑自然快语速。"
+      "priority": "真实工作主线：会议发言、方案展示、技术分享、技术面试。用已有词汇独立讲清问题、方案、取舍与下一步；先完成意思，再纠正与重说。不喜欢情景喜剧，不因 B1 选择幼稚剧情。",
+      "difficultyAdjustment": "此次只按题材偏好换课，不视为新难度或音频评估。优先约 5 分钟真实技术讲解，当前为 03:57；通过短分段、术语释义和短句组织提供支持，根据实际观看自评和独立表达再调整。80/20 为总体方向，不固定每天插入生活材料。"
     }
   },
   "records": [
@@ -34,7 +34,7 @@
       "total": null,
       "summary": "第 0 周已复核并经本人确认完成。依据外教文字报告：能理解人物动机、回应追问并描述有量化结果的技术经历，组织答案仍需部分提示；原报告任务 4、互动 4、语言 3，非独立音频测评。本人补充视频偏简单、本周投入约 1 小时，表达时有卡顿感；下周每天至少 1 小时，优先练用熟词讲清楚。下一课保持约 5 分钟与原速，首遍只听声音，继续练问题—行动—结果、主谓一致与自然搭配。发音与口语流畅度未评估。",
       "recommendation": "harder",
-      "nextLessonId": "02",
+      "nextLessonId": "02-workplace",
       "pronunciationNotes": [],
       "nextPractice": [
         "先独立用三句话讲问题、行动、结果；卡住时先换简单说法，提示后再脱稿重说。",
@@ -63,14 +63,22 @@
       ]
     },
     {
-      "lessonId": "02",
+      "lessonId": "02-workplace",
       "status": "not_assessed",
       "assessedAt": null,
       "reviewedAt": null,
       "scores": null,
       "total": null,
-      "summary": "第 1 周（2026-11-09—11-15）：根据首次反馈准备 He Said – She Said。首遍只听声音，再看英文字幕核对；重点把事情经过、原因、行动和结果讲清楚。等待实际自评与对话反馈。",
-      "history": []
+      "summary": "第 1 周：2026-11-16 因学员不喜欢情景喜剧，撤下未评估的 He Said – She Said，改为真实 API 技术讲解与原创工作表达练习。当前课仍未评估；换题材不是完成、升级或音频评估。等待实际观看自评和独立对话证据。",
+      "history": [
+        {
+          "date": "2026-11-16",
+          "source": "learner_content_preference",
+          "previousLessonId": "02",
+          "lessonId": "02-workplace",
+          "summary": "本人主动要求真实工作英语：会议、展示、技术分享、面试，对 He Said – She Said 情景喜剧无兴趣。仅记录内容偏好，不新增难度结论、分数、音频证据或完成记录。旧 id02 未评估课程被替换；第 0 周 nextLessonId 同步指向新 id，其原文记录、成绩与 history 不变。"
+        }
+      ]
     }
   ]
 }
